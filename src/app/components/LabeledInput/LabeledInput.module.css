@@ -1,0 +1,29 @@
+.LabeledInput {
+  color: var(--text-color);
+  display: grid;
+  gap: 0.7em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8em;
+}
+
+.LabeledInput__input {
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 0.8em 1.5em;
+  border-radius: 0.8em;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.LabeledInput__input::placeholder {
+  color: var(--hint-color);
+  font-family: var(--font-family);
+  text-transform: lowercase;
+}
+
+.LabeledInput__input:focus {
+  outline-color: var(--primary-color);
+}
