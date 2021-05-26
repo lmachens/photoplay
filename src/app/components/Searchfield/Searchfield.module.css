@@ -15,7 +15,7 @@
 .search__image svg {
   width: 0.75em;
   padding-left: 0.2em;
-  padding-top: 0.25;
+  padding-top: 0.25em;
 }
 
 .search__input::placeholder {
