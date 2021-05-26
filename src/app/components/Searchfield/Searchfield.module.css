@@ -8,7 +8,7 @@
 .search__input {
   background: none;
   border: none;
-  color: white;
+  color: var(--text-color);
   caret-color: var(--primary-color);
 }
 
