@@ -10,7 +10,7 @@ export default function NavBarLink({ icon, text }: LinkProps): JSX.Element {
   return (
     <a className={classes.link} href="#">
       {icon}
-      <span> {text} </span>
+      <span>{text}</span>
     </a>
   );
 }
