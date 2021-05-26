@@ -23,6 +23,17 @@
   --font-size: 100%;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    /* COLORS */
+    --secondary-color: #f0f0f0;
+    --text-color: #5a5a5a;
+    --hint-color: #9f9f9f;
+    --contrast-text-color: #fff;
+    --background-color: #f5f5f5;
+  }
+}
+
 html {
   font-size: var(--font-size);
 }
