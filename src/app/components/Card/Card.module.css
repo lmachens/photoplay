@@ -1,4 +1,20 @@
 .artistCard {
-  border: 5px solid black;
+  display: grid;
   text-align: center;
+  width: 6em;
+  grid-template-rows: 8rem auto;
+}
+
+.artistImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.artistName {
+  font-size: 0.8rem;
+  margin-top: 3%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

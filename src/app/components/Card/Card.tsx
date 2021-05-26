@@ -9,8 +9,8 @@ type CardProps = {
 function Card({ img, artist }: CardProps): JSX.Element {
   return (
     <div className={classes.artistCard}>
-      <img src={img} alt="" />
-      <h3>{artist}</h3>
+      <img className={classes.artistImage} src={img} alt="" />
+      <h3 className={classes.artistName}>{artist}</h3>
     </div>
   );
 }
