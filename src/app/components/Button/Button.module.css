@@ -1,6 +1,6 @@
 .button {
-  color: #000;
-  background: linear-gradient(180deg, #ffbb3b, #ffa90a);
+  color: var(--contrast-text-color);
+  background: var(--primary-gradient);
   font-size: 0.8em;
   padding: 0.8em 2em;
   border: none;
