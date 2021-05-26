@@ -8,7 +8,7 @@
 .search__input {
   background: none;
   border: none;
-  color: var(--text-colord);
+  color: var(--text-color);
   caret-color: var(--primary-color);
 }
 
@@ -25,6 +25,7 @@
   width: 0.75em;
   padding-left: 0.2em;
   padding-top: 0.25em;
+  fill: var(--text-color);
 }
 
 .search__image {
