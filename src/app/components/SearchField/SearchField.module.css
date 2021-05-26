@@ -21,14 +21,14 @@
   display: flex;
 }
 
-.label__icon svg {
+.label__icon {
   width: 0.75em;
   padding-left: 0.2em;
   padding-top: 0.25em;
   fill: var(--text-color);
 }
 
-.label__icon {
+.label__iconContainer {
   padding: 2px;
   place-self: center;
 }
