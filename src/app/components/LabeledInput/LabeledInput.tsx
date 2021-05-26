@@ -1,21 +1,20 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import styles from './LabeledInput.module.css';
 
 type LabeledInputProps = {
-  children: ReactNode;
+  label: string;
+  placeholder: string;
 };
 
-function LabeledInput({ children }: LabeledInputProps): JSX.Element {
+function LabeledInput({ label, placeholder }: LabeledInputProps): JSX.Element {
   return (
     <label className={styles.LabeledInput}>
-      {children}
+      {label}
       <input
         className={styles.LabeledInput__input}
         type="text"
-        placeholder={`${children}` + ' here'}
-      >
-        {}
-      </input>
+        placeholder={`${placeholder}` + ' here'}
+      />
     </label>
   );
 }

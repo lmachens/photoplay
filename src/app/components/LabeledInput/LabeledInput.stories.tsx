@@ -6,7 +6,9 @@ export default {
   component: LabeledInput,
 };
 
-export const email = (): JSX.Element => <LabeledInput>email</LabeledInput>;
+export const email = (): JSX.Element => (
+  <LabeledInput label="Email" placeholder="Email" />
+);
 export const password = (): JSX.Element => (
-  <LabeledInput>password</LabeledInput>
+  <LabeledInput label="Password" placeholder="Password" />
 );
