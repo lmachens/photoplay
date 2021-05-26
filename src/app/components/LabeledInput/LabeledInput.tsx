@@ -7,10 +7,10 @@ type LabeledInputProps = {
 
 function LabeledInput({ children }: LabeledInputProps): JSX.Element {
   return (
-    <label className={styles.LabeledInput_label}>
+    <label className={styles.LabeledInput}>
       {children}
       <input
-        className={styles.LabeledInput_input}
+        className={styles.LabeledInput__input}
         type="text"
         placeholder={`${children}` + ' here'}
       >
