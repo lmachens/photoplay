@@ -1,12 +1,12 @@
 import React from 'react';
-import classes from './Card.module.css';
+import classes from './ArtistCard.module.css';
 
 type CardProps = {
   imgSrc: string;
   artistName: string;
 };
 
-function Card({ imgSrc, artistName }: CardProps): JSX.Element {
+function ArtistCard({ imgSrc, artistName }: CardProps): JSX.Element {
   return (
     <div className={classes.card__container}>
       <img className={classes.card__image} src={imgSrc} alt="" />
@@ -15,4 +15,4 @@ function Card({ imgSrc, artistName }: CardProps): JSX.Element {
   );
 }
 
-export default Card;
+export default ArtistCard;
