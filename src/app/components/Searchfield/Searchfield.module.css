@@ -1,4 +1,4 @@
-.search {
+.searchField {
   background: var(--secondary-color);
   display: grid;
   grid-template-columns: 1em auto;

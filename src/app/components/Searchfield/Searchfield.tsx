@@ -24,7 +24,7 @@ const imageSrc = (
 
 function Searchfield({ placeholder }: InputProps): JSX.Element {
   return (
-    <label className={classes.search}>
+    <label className={classes.searchField}>
       <div className={classes.search__image}>{imageSrc}</div>
       <input className={classes.search__input} placeholder={placeholder} />
     </label>
