@@ -8,14 +8,14 @@
 .search__input {
   background: none;
   border: none;
-  color: var(--text-color);
+  color: var(--text-colord);
   caret-color: var(--primary-color);
 }
 
 .search__image svg {
-  width: 12px;
-  padding-left: 3px;
-  padding-top: 4px;
+  width: 0.75em;
+  padding-left: 0.2em;
+  padding-top: 0.25;
 }
 
 .search__input::placeholder {
