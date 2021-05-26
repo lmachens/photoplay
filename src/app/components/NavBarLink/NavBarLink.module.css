@@ -1,0 +1,9 @@
+.link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
