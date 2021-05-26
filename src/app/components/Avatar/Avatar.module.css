@@ -1,6 +1,6 @@
-.img {
+.avatar__img {
   width: 8em;
   height: 8em;
   border-radius: 100%;
-  border: 3px solid var(--primary-color);
+  border: 0.2em solid var(--primary-color);
 }
