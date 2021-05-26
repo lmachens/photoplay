@@ -1,0 +1,9 @@
+.link {
+  text-decoration: none;
+  color: var(--text-color);
+  fill: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  font-size: 1.2em;
+}
