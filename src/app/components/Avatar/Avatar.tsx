@@ -8,7 +8,7 @@ type AvatarProps = {
 function Avatar({ imageSrc }: AvatarProps): JSX.Element {
   return (
     <div>
-      <img src={imageSrc} className={classes.img} />
+      <img src={imageSrc} className={classes.avatar} />
     </div>
   );
 }
