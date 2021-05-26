@@ -10,7 +10,7 @@
     "serve": "vite preview",
     "prepare": "husky install",
     "test": "tsc && prettier --check . && eslint . && stylelint \"**/*.css\"",
-    "storybook": "start-storybook -s ./src -p 6006",
+    "storybook": "start-storybook -s src/app/assets -p 6006",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {

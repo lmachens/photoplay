@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import michaelPenaImage from '../../michaelPena.png';
+import michaelPenaImage from '../../assets/michaelPena.png';
 
 export default {
   title: 'Component/Card',
