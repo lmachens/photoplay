@@ -6,8 +6,10 @@ export default {
   component: SearchField,
 };
 
-export const Input = (): JSX.Element => <SearchField placeholder="Search..." />;
-export const Input2 = (): JSX.Element => <SearchField placeholder="Find..." />;
-export const Input3 = (): JSX.Element => (
+export const search = (): JSX.Element => (
+  <SearchField placeholder="Search..." />
+);
+export const find = (): JSX.Element => <SearchField placeholder="Find..." />;
+export const explore = (): JSX.Element => (
   <SearchField placeholder="Explore..." />
 );
