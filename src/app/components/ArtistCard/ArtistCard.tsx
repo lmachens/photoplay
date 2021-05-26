@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './ArtistCard.module.css';
+import styles from './ArtistCard.module.css';
 
 type CardProps = {
   imgSrc: string;
@@ -8,9 +8,9 @@ type CardProps = {
 
 function ArtistCard({ imgSrc, artistName }: CardProps): JSX.Element {
   return (
-    <div className={classes.card__container}>
-      <img className={classes.card__image} src={imgSrc} alt="" />
-      <h3 className={classes.card__name}>{artistName}</h3>
+    <div className={styles.container}>
+      <img className={styles.container__image} src={imgSrc} alt="" />
+      <h3 className={styles.container__name}>{artistName}</h3>
     </div>
   );
 }

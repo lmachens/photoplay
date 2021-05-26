@@ -1,12 +1,12 @@
 import React from 'react';
-import classes from './Avatar.module.css';
+import styles from './Avatar.module.css';
 
 type AvatarProps = {
   imageSrc: string;
 };
 
 function Avatar({ imageSrc }: AvatarProps): JSX.Element {
-  return <img src={imageSrc} className={classes.avatar__img} />;
+  return <img src={imageSrc} className={styles.img} />;
 }
 
 export default Avatar;

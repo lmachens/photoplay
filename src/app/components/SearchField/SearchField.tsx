@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './SearchField.module.css';
+import styles from './SearchField.module.css';
 
 type InputProps = {
   placeholder: string;
@@ -21,9 +21,9 @@ const SearchIcon = (
 
 function SearchField({ placeholder }: InputProps): JSX.Element {
   return (
-    <label className={classes.searchField}>
-      <div className={classes.searchField__icon}>{SearchIcon}</div>
-      <input className={classes.searchField__input} placeholder={placeholder} />
+    <label className={styles.label}>
+      <div className={styles.label__icon}>{SearchIcon}</div>
+      <input className={styles.label__input} placeholder={placeholder} />
     </label>
   );
 }
