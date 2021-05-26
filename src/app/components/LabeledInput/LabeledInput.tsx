@@ -20,11 +20,3 @@ function LabeledInput({ label, placeholder }: LabeledInputProps): JSX.Element {
 }
 
 export default LabeledInput;
-
-// Beispiel react input element:
-// {
-//   /* <label>
-//     Name:
-//     <input type="text" name="name" />
-//   </label> */
-// }
