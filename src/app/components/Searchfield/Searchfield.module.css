@@ -1,0 +1,33 @@
+.search {
+  background: var(--secondary-color);
+  display: grid;
+  grid-template-columns: 1em auto;
+  border-radius: 0.5em;
+}
+
+.search__input {
+  background: none;
+  border: none;
+  color: white;
+  caret-color: var(--primary-color);
+}
+
+.search__image svg {
+  width: 12px;
+  padding-left: 3px;
+  padding-top: 4px;
+}
+
+.search__input::placeholder {
+  color: white;
+  font-family: var(--font-family);
+  font-weight: bold;
+  opacity: 50%;
+  padding-left: 3px;
+  display: flex;
+}
+
+.search__image {
+  padding: 2px;
+  place-self: center;
+}
