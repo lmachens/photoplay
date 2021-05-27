@@ -18,7 +18,8 @@ function Login(): JSX.Element {
       <header>
         <AppIcon />
       </header>
-      <main>
+      <img src="/fadeOverlay.png" alt="" className={styles.fadeOverlay} />
+      <main className={styles.main}>
         <form onSubmit={handleSubmit} className={styles.form}>
           <LabeledInput
             label="Email"

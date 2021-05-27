@@ -12,6 +12,10 @@
   align-items: stretch;
 }
 
+.main {
+  z-index: 1;
+}
+
 .form {
   text-align: left;
   display: grid;
@@ -20,4 +24,12 @@
 
 .hint {
   color: var(--hint-color);
+}
+
+.fadeOverlay {
+  position: fixed;
+  top: calc(50% - 76px);
+  left: 0;
+  z-index: 0;
+  width: 100%;
 }
