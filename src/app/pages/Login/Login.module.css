@@ -1,0 +1,22 @@
+.container {
+  height: 100vh;
+  background-image: url('/background.png');
+  background-position: center;
+  padding: 2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.form {
+  text-align: left;
+  display: grid;
+  row-gap: 1em;
+}
+
+.hint {
+  color: var(--hint-color);
+}
