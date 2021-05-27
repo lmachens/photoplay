@@ -1,7 +1,8 @@
 .container {
   height: 100vh;
   background-image: url('/background.png');
-  background-position: center;
+  background-repeat: repeat no-repeat;
+  background-position: center bottom 50vh;
   padding: 2em;
   text-align: center;
   display: flex;
