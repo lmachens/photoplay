@@ -3,18 +3,23 @@ import classes from './SocialLogin.module.css';
 
 type SocialProps = {
   title: string;
-  icon: React.SVGProps<SVGSVGElement>;
+  icon1: React.SVGProps<SVGSVGElement>;
+  icon2: React.SVGProps<SVGSVGElement>;
 };
 
-export default function SocialLogin({ title, icon }: SocialProps): JSX.Element {
+export default function SocialLogin({
+  title,
+  icon1,
+  icon2,
+}: SocialProps): JSX.Element {
   return (
     <div className={classes.SocialLogin}>
       <span className={classes.SocialLogin__title}>{title}</span>
-      <a className={classes.SocialLogin__link} href="#">
-        {icon}
+      <a className={classes.SocialLogin__link1} href="#">
+        {icon1}
       </a>
-      <a className={classes.SocialLogin__link} href="#">
-        {icon}
+      <a className={classes.SocialLogin__link2} href="#">
+        {icon2}
       </a>
     </div>
   );
