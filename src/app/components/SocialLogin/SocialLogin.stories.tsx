@@ -4,6 +4,7 @@ import GoogleIcon from '../Icons/GoogleIcon';
 import SocialLogin from './SocialLogin';
 
 export default {
+  title: 'Component/SocialLogin',
   component: SocialLogin,
 };
 
