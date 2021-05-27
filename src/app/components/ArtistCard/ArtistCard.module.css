@@ -1,17 +1,17 @@
-.card__container {
+.container {
   display: grid;
   text-align: center;
   width: 6em;
   grid-template-rows: 8rem auto;
 }
 
-.card__image {
+.container__image {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.card__name {
+.container__name {
   font-size: 0.8rem;
   margin-top: 3%;
   text-overflow: ellipsis;

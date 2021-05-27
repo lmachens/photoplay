@@ -1,12 +1,13 @@
-import React, { ReactNode } from 'react';
-import classes from './BackButton.module.css';
+import React from 'react';
+import styles from './BackButton.module.css';
 
-type BackButtonProps = {
-  children: ReactNode;
-};
-
-function BackButton({ children }: BackButtonProps): JSX.Element {
-  return <button className={classes.backButton}>{children}</button>;
+function BackButton(): JSX.Element {
+  return (
+    <a className={styles.backButton} href="#">
+      <span className={styles.backArrow}>&lt;</span>
+      Back
+    </a>
+  );
 }
 
 export default BackButton;

@@ -1,18 +1,18 @@
-.searchField {
+.label {
   background: var(--secondary-color);
   display: grid;
   grid-template-columns: 1em auto;
   border-radius: 0.5em;
 }
 
-.searchField__input {
+.label__input {
   background: none;
   border: none;
   color: var(--text-color);
   caret-color: var(--primary-color);
 }
 
-.searchField__input::placeholder {
+.label__input::placeholder {
   color: var(--text-color);
   font-family: var(--font-family);
   font-weight: bold;
@@ -21,14 +21,14 @@
   display: flex;
 }
 
-.searchField__icon svg {
+.label__icon {
   width: 0.75em;
   padding-left: 0.2em;
   padding-top: 0.25em;
   fill: var(--text-color);
 }
 
-.searchField__icon {
+.label__iconContainer {
   padding: 2px;
   place-self: center;
 }

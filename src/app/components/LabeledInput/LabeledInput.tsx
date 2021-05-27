@@ -8,10 +8,10 @@ type LabeledInputProps = {
 
 function LabeledInput({ label, placeholder }: LabeledInputProps): JSX.Element {
   return (
-    <label className={styles.LabeledInput}>
+    <label className={styles.container}>
       {label}
       <input
-        className={styles.LabeledInput__input}
+        className={styles.container__input}
         type="text"
         placeholder={`${placeholder}` + ' here'}
       />
