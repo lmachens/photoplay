@@ -6,4 +6,4 @@ export default {
   component: BackButton,
 };
 
-export const Back = (): JSX.Element => <BackButton></BackButton>;
+export const Back = (): JSX.Element => <BackButton />;
