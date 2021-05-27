@@ -1,0 +1,14 @@
+.container {
+  display: grid;
+  place-items: center;
+  gap: 0.4em;
+}
+
+.count {
+  font-size: 2em;
+}
+
+.stars {
+  display: flex;
+  column-gap: 0.2em;
+}
