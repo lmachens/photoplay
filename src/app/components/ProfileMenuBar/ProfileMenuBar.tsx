@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './ProfileMenuBar.module.css';
+import styles from './ProfileMenuBar.module.css';
 
 type LinkProps = {
   link: string;
@@ -9,7 +9,7 @@ type LinkProps = {
 
 function ProfileMenuBar({ link, icon, text }: LinkProps): JSX.Element {
   return (
-    <a className={classes.link} href={link}>
+    <a className={styles.link} href={link}>
       {icon}
       <span>{text}</span>
     </a>
