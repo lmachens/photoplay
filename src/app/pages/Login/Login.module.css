@@ -9,11 +9,13 @@
   flex-direction: column;
   row-gap: 2em;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
 }
 
 .main {
   z-index: 1;
+  width: 100%;
+  max-width: 500px;
 }
 
 .form {
