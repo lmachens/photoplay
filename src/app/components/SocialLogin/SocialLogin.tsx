@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './SocialLogin.module.css';
+import styles from './SocialLogin.module.css';
 
 type SocialProps = {
   title: string;
@@ -13,12 +13,12 @@ export default function SocialLogin({
   icon2,
 }: SocialProps): JSX.Element {
   return (
-    <div className={classes.SocialLogin}>
-      <span className={classes.SocialLogin__title}>{title}</span>
-      <a className={classes.SocialLogin__link1} href="#">
+    <div className={styles.SocialLogin}>
+      <span className={styles.SocialLogin__title}>{title}</span>
+      <a className={styles.SocialLogin__link1} href="#">
         {icon1}
       </a>
-      <a className={classes.SocialLogin__link2} href="#">
+      <a className={styles.SocialLogin__link2} href="#">
         {icon2}
       </a>
     </div>
