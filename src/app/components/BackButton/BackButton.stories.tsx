@@ -6,8 +6,4 @@ export default {
   component: BackButton,
 };
 
-export const Back = (): JSX.Element => (
-  <BackButton>
-    <span>&lt;</span>Back
-  </BackButton>
-);
+export const Back = (): JSX.Element => <BackButton></BackButton>;

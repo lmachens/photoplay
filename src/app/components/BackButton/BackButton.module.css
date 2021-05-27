@@ -4,9 +4,10 @@
   background: transparent;
   color: var(--text-color);
   text-transform: uppercase;
+  text-decoration: none;
 }
 
-.backButton span {
+.backArrow {
   font-size: 1.7em;
   position: relative;
   top: 0.15em;
