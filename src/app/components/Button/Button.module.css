@@ -2,8 +2,8 @@
   color: var(--contrast-text-color);
   background: var(--primary-gradient);
   font-size: 0.8em;
-  padding: 0.8em 2em;
+  padding: 1em 1.5em;
   border: none;
-  border-radius: 0.4em;
+  border-radius: 0.8em;
   text-transform: uppercase;
 }
