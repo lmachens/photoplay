@@ -20,7 +20,3 @@ export default function TVShowDetails(): JSX.Element {
     </div>
   );
 }
-
-// type InputProps = {
-//     categories: Array<string>;
-//   };
