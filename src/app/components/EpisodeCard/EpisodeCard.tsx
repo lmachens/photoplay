@@ -1,25 +1,26 @@
 import React from 'react';
-import classes from './EpisodeCard.module.css';
+import styles from './EpisodeCard.module.css';
+import DownloadIcon from '../Icons/DownloadIcon';
 
 type InputProps = {
   headline: string;
-  length: string;
+  runtime: number;
   imgSrc: string;
-  buttonText: string;
-  downloadIcon: React.SVGProps<SVGSVGElement>;
 };
 
-function EpisodeCard(InputProps: InputProps): JSX.Element {
+function EpisodeCard({
+  headline,
+  runtime: length,
+  imgSrc,
+}: InputProps): JSX.Element {
   return (
-    <div className={classes.episodeCard}>
-      <img className={classes.episodeCard__img} src={InputProps.imgSrc} />
-      <h3 className={classes.episodeCard__headline}>{InputProps.headline}</h3>
-      <span className={classes.episodeCard__length}>{InputProps.length}</span>
-      <button className={classes.episodeCard__button}>
-        {InputProps.downloadIcon}
-        <div className={classes.episodeCard__button_text}>
-          {InputProps.buttonText}
-        </div>
+    <div className={styles.episodeCard}>
+      <img className={styles.episodeCard__img} src={imgSrc} />
+      <h3 className={styles.episodeCard__headline}>{headline}</h3>
+      <span className={styles.episodeCard__length}>{length} min</span>
+      <button className={styles.episodeCard__button}>
+        <DownloadIcon className={styles.episodeCard__button_download} />
+        <div className={styles.episodeCard__button_text}>Download</div>
       </button>
     </div>
   );

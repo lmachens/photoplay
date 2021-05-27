@@ -1,6 +1,8 @@
 import React from 'react';
 
-export default function DownloadIcon(): JSX.Element {
+export default function DownloadIcon(
+  props: React.SVGProps<SVGSVGElement>
+): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,6 +10,7 @@ export default function DownloadIcon(): JSX.Element {
       height="19.469"
       viewBox="0 0 18.252 19.469"
       fill="currentColor"
+      {...props}
     >
       <g transform="translate(-16)">
         <g transform="translate(20.259)">

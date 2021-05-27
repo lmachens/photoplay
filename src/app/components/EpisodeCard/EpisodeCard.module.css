@@ -43,3 +43,8 @@
 .episodeCard__button_text {
   font-weight: 300;
 }
+
+.episodeCard__button_download {
+  width: auto;
+  height: 50%;
+}
