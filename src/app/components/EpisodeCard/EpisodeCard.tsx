@@ -18,7 +18,6 @@ function EpisodeCard(InputProps: InputProps): JSX.Element {
       <button className={classes.episodeCard__button}>
         {InputProps.downloadIcon}
         <div className={classes.episodeCard__button_text}>
-          {' '}
           {InputProps.buttonText}
         </div>
       </button>

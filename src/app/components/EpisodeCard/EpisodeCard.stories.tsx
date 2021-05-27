@@ -11,7 +11,7 @@ export const episodeCard = (): JSX.Element => (
   <EpisodeCard
     headline="1. The Kingpin Strategy"
     length="58 min"
-    imgSrc="./dieter.jpeg"
+    imgSrc="./preview1.jpg"
     downloadIcon={<DownloadIcon />}
     buttonText="Download"
   />

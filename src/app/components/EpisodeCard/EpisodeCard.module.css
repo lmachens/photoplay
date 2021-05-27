@@ -3,12 +3,13 @@
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 0.8em;
+  font-size: 3vw;
 }
 
 .episodeCard__img {
-  width: 12em;
-  height: 8em;
   grid-row: 1/4;
+  width: 100%;
+  height: auto;
 }
 
 .episodeCard__headline {
@@ -36,9 +37,9 @@
   color: var(--primary-color);
   border: 0;
   cursor: pointer;
+  font-size: 2.5vw;
 }
 
 .episodeCard__button_text {
-  font-size: 1.1em;
   font-weight: 300;
 }
