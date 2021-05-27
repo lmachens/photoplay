@@ -1,0 +1,30 @@
+.castPortrait__image {
+  width: 16.75em;
+  height: 20.8em;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+}
+
+.castPortrait__firstName,
+.castPortrait__lastName {
+  text-align: center;
+  margin: 0;
+  font-family: var(--font-family);
+
+  /* position: absolute; */
+}
+
+.castPortrait__firstName {
+  margin: -0.5em;
+}
+
+.castPortrait__lastName {
+  margin: 0.5em;
+}
+
+.castPortrait__vignette {
+  box-shadow: inset 0 0 4.5em 2.7em black;
+}

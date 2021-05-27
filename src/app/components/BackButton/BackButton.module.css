@@ -1,0 +1,13 @@
+.backButton {
+  font-family: var(--font-family);
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.backButton span {
+  position: relative;
+  font-size: 1.7em;
+  top: 0.15em;
+}
