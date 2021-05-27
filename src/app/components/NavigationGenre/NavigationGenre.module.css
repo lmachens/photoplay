@@ -2,17 +2,20 @@
   display: flex;
   justify-content: space-around;
 }
-.container a {
+.navLink {
   border-left: 1px solid var(--text-color);
   width: 100%;
   text-align: center;
   font-size: clamp(1rem, 2.5vw, 2rem);
+  text-decoration: none;
+  color: var(--text-color);
 }
 
-a:first-child {
+.container a:first-child {
   border-left: none;
 }
 
-.highlight {
+.navLink:hover,
+.navLink:active {
   color: var(--primary-color);
 }
