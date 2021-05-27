@@ -1,4 +1,4 @@
-.LabeledInput {
+.container {
   color: var(--text-color);
   display: grid;
   gap: 0.7em;
@@ -7,7 +7,7 @@
   font-size: 0.8em;
 }
 
-.LabeledInput__input {
+.container__input {
   color: var(--text-color);
   background-color: var(--secondary-color);
   border: none;
@@ -18,12 +18,12 @@
   font-size: 1.2em;
 }
 
-.LabeledInput__input::placeholder {
+.container__input::placeholder {
   color: var(--hint-color);
   font-family: var(--font-family);
   text-transform: lowercase;
 }
 
-.LabeledInput__input:focus {
+.container__input:focus {
   outline-color: var(--primary-color);
 }
