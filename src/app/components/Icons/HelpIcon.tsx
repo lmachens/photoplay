@@ -3,7 +3,6 @@ import React from 'react';
 function HelpIcon(): JSX.Element {
   return (
     <svg
-      id="icon-2"
       xmlns="http://www.w3.org/2000/svg"
       width="19.96"
       height="19.96"

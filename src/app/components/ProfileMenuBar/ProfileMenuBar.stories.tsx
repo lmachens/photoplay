@@ -12,17 +12,17 @@ export default {
 };
 
 export const Account = (): JSX.Element => (
-  <ProfileMenuBar icon={<AccountIcon />} text="Account" />
+  <ProfileMenuBar link="#" icon={<AccountIcon />} text="Account" />
 );
 export const Notifications = (): JSX.Element => (
-  <ProfileMenuBar icon={<NotificationsIcon />} text="Notifications" />
+  <ProfileMenuBar link="#" icon={<NotificationsIcon />} text="Notifications" />
 );
 export const Settings = (): JSX.Element => (
-  <ProfileMenuBar icon={<SettingsIcon />} text="Settings" />
+  <ProfileMenuBar link="#" icon={<SettingsIcon />} text="Settings" />
 );
 export const Help = (): JSX.Element => (
-  <ProfileMenuBar icon={<HelpIcon />} text="Help" />
+  <ProfileMenuBar link="#" icon={<HelpIcon />} text="Help" />
 );
 export const Logout = (): JSX.Element => (
-  <ProfileMenuBar icon={<LogoutIcon />} text="Logout" />
+  <ProfileMenuBar link="#" icon={<LogoutIcon />} text="Logout" />
 );
