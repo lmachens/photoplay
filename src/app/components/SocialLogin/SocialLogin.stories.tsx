@@ -1,6 +1,5 @@
 import React from 'react';
 import FacebookIcon from '../Icons/FacebookIcon';
-import GoogleIcon from '../Icons/GoogleIcon';
 import SocialLogin from './SocialLogin';
 
 export default {
@@ -9,9 +8,5 @@ export default {
 };
 
 export const SocialLogins = (): JSX.Element => (
-  <SocialLogin
-    title="Social Logins"
-    icon1={<FacebookIcon />}
-    icon2={<GoogleIcon />}
-  />
+  <SocialLogin icon={<FacebookIcon />} link={'URL'} />
 );
