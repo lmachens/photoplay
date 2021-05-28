@@ -13,7 +13,7 @@
   font-family: var(--font-family);
   font-size: 0.94em;
   color: var(--text-color);
-  margin-left: 1em;
+  margin: 0 1em;
 }
 
 .watchlist {
@@ -21,4 +21,10 @@
   justify-content: space-between;
   align-items: flex-end;
   margin: 0 -4em 0 1em;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 2em 1em 2em;
 }
