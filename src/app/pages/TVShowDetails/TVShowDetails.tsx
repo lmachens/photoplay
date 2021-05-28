@@ -6,11 +6,13 @@ import Button from '../../components/Button/Button';
 import EpisodeCard from '../../components/EpisodeCard/EpisodeCard';
 import Trailer from '../../components/Trailer/Trailer';
 import NavBar from '../../components/NavBar/NavBar';
+import BackButton from '../../components/BackButton/BackButton';
 
 export default function TVShowDetails(): JSX.Element {
   return (
     <div className={styles.container}>
       <header>
+        <BackButton />
         <Trailer headline="Narcos" videoSrc="" />
         <NavigationGenre categories={['Drama', 'Biographical', 'Crime Film']} />
       </header>
