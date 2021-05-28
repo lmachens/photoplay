@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Profile.module.css';
 import Avatar from '../../components/Avatar/Avatar';
 import AccountIcon from '../../components/Icons/AccountIcon';
 import ProfileMenuBar from '../../components/ProfileMenuBar/ProfileMenuBar';
@@ -14,32 +15,28 @@ import ProfileIcon from '../../components/Icons/ProfileIcon';
 
 function Profile(): JSX.Element {
   return (
-    <div>
-      <header>
+    <div className={styles.container}>
+      <header className={styles.header}>
         <Avatar imageSrc="/dieter.jpeg" />
-        <h1>Dieter Bohlen</h1>
-        <span>Premium</span>
+        <h1 className={styles.profileName}>Dieter Bohlen</h1>
+        <span className={styles.profileStatus}>Premium</span>
       </header>
-      <main>
-        <div>
-          <ProfileMenuBar link="#" icon={<AccountIcon />} text="Account" />
-          <ProfileMenuBar
-            link="#"
-            icon={<NotificationsIcon />}
-            text="Notifications"
-          />
-          <ProfileMenuBar link="#" icon={<SettingsIcon />} text="Settings" />
-          <ProfileMenuBar link="#" icon={<HelpIcon />} text="Help" />
-          <ProfileMenuBar link="#" icon={<LogoutIcon />} text="Logout" />
-        </div>
+      <main className={styles.profileMenu}>
+        <ProfileMenuBar link="#" icon={<AccountIcon />} text="Account" />
+        <ProfileMenuBar
+          link="#"
+          icon={<NotificationsIcon />}
+          text="Notifications"
+        />
+        <ProfileMenuBar link="#" icon={<SettingsIcon />} text="Settings" />
+        <ProfileMenuBar link="#" icon={<HelpIcon />} text="Help" />
+        <ProfileMenuBar link="#" icon={<LogoutIcon />} text="Logout" />
       </main>
-      <footer>
-        <div>
-          <NavBarLink icon={<HomeIcon />} text="Home" />
-          <NavBarLink icon={<SearchIcon />} text="Search" />
-          <NavBarLink icon={<DownloadIcon />} text="Download" />
-          <NavBarLink icon={<ProfileIcon />} text="Profile" />
-        </div>
+      <footer className={styles.footer}>
+        <NavBarLink icon={<HomeIcon />} text="Home" />
+        <NavBarLink icon={<SearchIcon />} text="Search" />
+        <NavBarLink icon={<DownloadIcon />} text="Download" />
+        <NavBarLink icon={<ProfileIcon />} text="Profile" />
       </footer>
     </div>
   );

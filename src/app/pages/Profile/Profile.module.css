@@ -1,3 +1,43 @@
-main {
-  background: none;
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr auto;
+  row-gap: 2em;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2em;
+}
+
+.profileName {
+  margin: 0;
+  font-weight: 400;
+  padding-top: 0.7em;
+}
+
+.profileStatus {
+  color: var(--primary-color);
+  font-size: 1.2em;
+}
+
+.profileMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-left: 2em;
+}
+
+.profileMenu :last-child {
+  border: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5em;
+  background: var(--secondary-color);
 }
