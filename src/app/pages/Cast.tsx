@@ -7,6 +7,7 @@ import DownloadIcon from '../components/Icons/DownloadIcon';
 import HomeIcon from '../components/Icons/HomeIcon';
 import ProfileIcon from '../components/Icons/ProfileIcon';
 import SearchIcon from '../components/Icons/SearchIcon';
+import MovieCard from '../components/MovieCard/MovieCard';
 import NavBarLink from '../components/NavBarLink/NavBarLink';
 import styles from './Cast.module.css';
 
@@ -29,7 +30,15 @@ function Cast(): JSX.Element {
           worker, and Eleuterio Peña, who worked at a button factory. His
           parents were originally from Mexico.{' '}
         </p>
-        <p className={styles.movieExamples}>Known for movie examples.</p>
+        <div>
+          <p className={styles.movieCardTitle}>Known for</p>
+          <div className={styles.movieCards}>
+            <MovieCard imgSrc="./antMan.png" />
+            <MovieCard imgSrc="./endOfWatch.png" />
+            <MovieCard imgSrc="./americanHustle.png" />
+            <MovieCard imgSrc="./crash.png" />
+          </div>
+        </div>
       </main>
       <footer className={styles.footer}>
         <div className={styles.navBar}>

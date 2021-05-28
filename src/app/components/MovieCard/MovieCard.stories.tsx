@@ -6,14 +6,14 @@ export default {
   component: MovieCard,
 };
 
-export const Antman = (): JSX.Element => <MovieCard imgSrc="./Antman.png" />;
+export const Antman = (): JSX.Element => <MovieCard imgSrc="./antman.png" />;
 
 export const EndOfWatch = (): JSX.Element => (
-  <MovieCard imgSrc="./EndOfWatch.png" />
+  <MovieCard imgSrc="./endOfWatch.png" />
 );
 
 export const AmericanHustle = (): JSX.Element => (
-  <MovieCard imgSrc="./AmericanHustle.png" />
+  <MovieCard imgSrc="./americanHustle.png" />
 );
 
-export const Crash = (): JSX.Element => <MovieCard imgSrc="./Crash.png" />;
+export const Crash = (): JSX.Element => <MovieCard imgSrc="./crash.png" />;

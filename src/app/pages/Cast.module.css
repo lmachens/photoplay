@@ -11,6 +11,22 @@
   justify-content: center;
 }
 
+.castDescription {
+  font-weight: 100;
+}
+
+.movieCardTitle {
+  font-weight: 600;
+}
+
+.movieCards {
+  display: grid;
+  column-gap: 0.5em;
+  width: 100%;
+  grid-template-columns: 27.5% 27.5% 27.5% 27.5%;
+  overflow: overlay;
+}
+
 .navBar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
