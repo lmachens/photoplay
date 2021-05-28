@@ -17,8 +17,12 @@ function ProfilePictureIcon(props: React.SVGProps<SVGSVGElement>): JSX.Element {
           y2="1"
           gradientUnits="objectBoundingBox"
         >
-          <stop offset="0" stop-color="#ffbb3b" />
-          <stop offset="1" stop-color="#ffa90a" />
+          <stop offset="0" stop-color="var(--primary-gradient-from)" />
+          <stop
+            offset="1"
+            stop-color="    var(--primary-gradient-to)
+"
+          />
         </linearGradient>
       </defs>
       <path
