@@ -25,8 +25,8 @@ function AppIcon(): JSX.Element {
           transform="translate(131 300)"
           fill="var(--primary-color)"
           font-size="16"
-          font-family="Gotham-Light, Gotham"
-          font-weight="300"
+          font-family="var(--font-family)"
+          font-weight="bold"
           letter-spacing="0.076em"
         >
           <tspan x="0" y="0">
