@@ -1,6 +1,7 @@
 import React from 'react';
 import NavigationGenre from '../../components/NavigationGenre/NavigationGenre';
 import Rating from '../../components/Rating/Rating';
+import MovieCard from '../../components/MovieCard/MovieCard';
 import styles from './Homescreen.module.css';
 
 type HomescreenProps = {
@@ -17,6 +18,13 @@ function Homescreen({ imgSrc }: HomescreenProps): JSX.Element {
         <Rating value={4}></Rating>
         <div className={styles.navigationGenre}>
           <NavigationGenre categories={categoriesArray}></NavigationGenre>
+        </div>
+        <div className={styles.watchlist}>
+          <h2>Watching</h2>
+          <MovieCard imgSrc="/narcos.png"></MovieCard>
+          <MovieCard imgSrc="/deadpool.png"></MovieCard>
+          <MovieCard imgSrc="/annabelle.png"></MovieCard>
+          <MovieCard imgSrc="/toystory.png"></MovieCard>
         </div>
       </main>
     </div>
