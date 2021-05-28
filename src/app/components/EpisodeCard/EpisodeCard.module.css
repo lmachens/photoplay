@@ -1,7 +1,7 @@
 .episodeCard {
   background: transparent;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 15em 1fr;
   column-gap: 0.8em;
   font-size: 3vw;
   text-align: left;

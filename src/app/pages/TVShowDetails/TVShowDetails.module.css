@@ -7,6 +7,11 @@
   padding-left: 0.5em;
 }
 
+.movieDescription {
+  padding: 0 2em;
+  text-align: left;
+}
+
 footer {
   display: flex;
   justify-content: space-around;
