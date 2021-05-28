@@ -5,11 +5,6 @@ import Rating from '../../components/Rating/Rating';
 import Button from '../../components/Button/Button';
 import EpisodeCard from '../../components/EpisodeCard/EpisodeCard';
 import Trailer from '../../components/Trailer/Trailer';
-import NavBarLink from '../../components/NavBarLink/NavBarLink';
-import HomeIcon from '../../components/Icons/HomeIcon';
-import SearchIcon from '../../components/Icons/SearchIcon';
-import DownloadIcon from '../../components/Icons/DownloadIcon';
-import ProfileIcon from '../../components/Icons/ProfileIcon';
 
 export default function TVShowDetails(): JSX.Element {
   return (
@@ -34,12 +29,7 @@ export default function TVShowDetails(): JSX.Element {
         <p className={styles.episodesHeadline}>Episodes</p>
         <EpisodeCard headline="Headline" runtime={120} imgSrc="/matrix.jpg" />
       </main>
-      <footer>
-        <NavBarLink icon={<HomeIcon />} text="Home" />
-        <NavBarLink icon={<SearchIcon />} text="Search" />
-        <NavBarLink icon={<DownloadIcon />} text="Download" />
-        <NavBarLink icon={<ProfileIcon />} text="Profile" />
-      </footer>
+      <footer></footer>
     </div>
   );
 }
