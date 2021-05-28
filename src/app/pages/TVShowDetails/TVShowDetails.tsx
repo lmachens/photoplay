@@ -5,6 +5,7 @@ import Rating from '../../components/Rating/Rating';
 import Button from '../../components/Button/Button';
 import EpisodeCard from '../../components/EpisodeCard/EpisodeCard';
 import Trailer from '../../components/Trailer/Trailer';
+import NavBar from '../../components/NavBar/NavBar';
 
 export default function TVShowDetails(): JSX.Element {
   return (
@@ -28,8 +29,11 @@ export default function TVShowDetails(): JSX.Element {
         <Button>Watch Now</Button>
         <p className={styles.episodesHeadline}>Episodes</p>
         <EpisodeCard headline="Headline" runtime={120} imgSrc="/matrix.jpg" />
+        <EpisodeCard headline="Headline" runtime={120} imgSrc="/matrix.jpg" />
       </main>
-      <footer></footer>
+      <footer>
+        <NavBar />
+      </footer>
     </div>
   );
 }
