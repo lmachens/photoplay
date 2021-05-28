@@ -1,9 +1,15 @@
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
 .container {
   text-align: center;
+}
+
+.episodesHeadline {
+  text-align: left;
+  padding-left: 0.5em;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
 }

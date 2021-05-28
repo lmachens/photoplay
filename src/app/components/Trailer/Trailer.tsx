@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Trailer.module.css';
 
 type TrailerProps = {
   headline: string;
@@ -8,11 +9,11 @@ type TrailerProps = {
 function Trailer({ headline, videoSrc }: TrailerProps): JSX.Element {
   return (
     <>
-      <video controls poster="narcos.png">
+      <video className={styles.video} controls poster="narcos.png">
         <source src={videoSrc} type="video/mp4" />
         <source src={videoSrc} type="video/webm" />
       </video>
-      <h1>{headline}</h1>
+      <h1 className={styles.video__headline}>{headline}</h1>
     </>
   );
 }

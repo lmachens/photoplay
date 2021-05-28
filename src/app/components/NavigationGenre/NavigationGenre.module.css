@@ -1,6 +1,7 @@
 .container {
   display: flex;
   justify-content: space-around;
+  padding: 1em 0;
 }
 .navLink {
   border-left: 1px solid var(--text-color);

@@ -1,5 +1,9 @@
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
+.video {
+  width: 100%;
+}
+
+.video__headline {
+  text-align: left;
+  margin: 0;
+  padding-left: 0.5em;
 }
