@@ -34,7 +34,7 @@ export default function TVShowDetails(): JSX.Element {
         <p className={styles.episodesHeadline}>Episodes</p>
         <EpisodeCard headline="Headline" runtime={120} imgSrc="/matrix.jpg" />
       </main>
-      <footer className={styles.navBar}>
+      <footer>
         <NavBarLink icon={<HomeIcon />} text="Home" />
         <NavBarLink icon={<SearchIcon />} text="Search" />
         <NavBarLink icon={<DownloadIcon />} text="Download" />
