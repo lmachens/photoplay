@@ -14,7 +14,7 @@
 .registerForm__label {
   grid-row-gap: 2em;
   display: grid;
-  margin: 0% 7% 0% 7%;
+  margin: 0% 7%;
 }
 
 .registerForm__main {
