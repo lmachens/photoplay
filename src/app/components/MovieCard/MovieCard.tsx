@@ -5,11 +5,7 @@ type WatchlistProps = {
 };
 
 function Watchlist({ imgSrc }: WatchlistProps): JSX.Element {
-  return (
-    <div>
-      <img src={imgSrc} alt="" />
-    </div>
-  );
+  return <img src={imgSrc} alt="" />;
 }
 
 export default Watchlist;

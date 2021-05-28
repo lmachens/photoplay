@@ -17,10 +17,16 @@
 }
 
 .watchlist {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin: 0 -4em 0 1em;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1.5em;
+  padding-left: 1em;
+  overflow-y: scroll;
+  align-items: end;
+}
+
+.watchlist::-webkit-scrollbar {
+  display: none;
 }
 
 .navBar {
