@@ -7,11 +7,7 @@ type InputProps = {
   imgSrc: string;
 };
 
-function EpisodeCard({
-  headline,
-  seriesInfo,
-  imgSrc,
-}: InputProps): JSX.Element {
+function SeriesCard({ headline, seriesInfo, imgSrc }: InputProps): JSX.Element {
   return (
     <div className={styles.container}>
       <img className={styles.img} src={imgSrc} />
@@ -22,4 +18,4 @@ function EpisodeCard({
     </div>
   );
 }
-export default EpisodeCard;
+export default SeriesCard;
