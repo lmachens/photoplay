@@ -1,7 +1,7 @@
 .link {
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--primary-color);
+  color: var(--navbar-icon-color);
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -9,4 +9,9 @@
   gap: 0.7em;
   font-size: 0.7em;
   font-weight: bold;
+}
+
+.link:hover,
+.link:active {
+  color: var(--primary-color);
 }
