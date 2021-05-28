@@ -1,8 +1,24 @@
 .container {
   background: var(--background-color);
+  display: grid;
+  gap: 1em;
 }
 
 .poster {
   width: 100%;
   margin-top: -4.5em;
+}
+
+.watchlistTitle {
+  font-family: var(--font-family);
+  font-size: 0.94em;
+  color: var(--text-color);
+  margin-left: 1em;
+}
+
+.watchlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 -4em 0 1em;
 }
