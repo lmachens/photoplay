@@ -26,9 +26,9 @@ function Cast(): JSX.Element {
           />
         </div>
         <p className={styles.castDescription}>
-          Philipp Gartz was born and raised in Chicago, to Nicolasa, a social
-          worker, and Eleuterio Peña, who worked at a button factory. His
-          parents were originally from Mexico.{' '}
+          Philipp Gartz was born and raised on the moon. One day he fell from
+          the sky and landed in a pond of new fishes! He is a giant, talented
+          and good looking - an astonishing guy! Watch his movies (or code...)!
         </p>
         <div>
           <p className={styles.movieCardTitle}>Known for</p>
