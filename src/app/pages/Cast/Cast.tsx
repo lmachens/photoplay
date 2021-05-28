@@ -1,14 +1,12 @@
 import React from 'react';
-// import ArtistCard from '../components/ArtistCard/ArtistCard';
-import BackButton from '../components/BackButton/BackButton';
-// import michaelPenaImage from '../assets/michaelPena.png';
-import CastPortrait from '../components/CastPortrait/CastPortrait';
-import DownloadIcon from '../components/Icons/DownloadIcon';
-import HomeIcon from '../components/Icons/HomeIcon';
-import ProfileIcon from '../components/Icons/ProfileIcon';
-import SearchIcon from '../components/Icons/SearchIcon';
-import MovieCard from '../components/MovieCard/MovieCard';
-import NavBarLink from '../components/NavBarLink/NavBarLink';
+import BackButton from '../../components/BackButton/BackButton';
+import CastPortrait from '../../components/CastPortrait/CastPortrait';
+import DownloadIcon from '../../components/Icons/DownloadIcon';
+import HomeIcon from '../../components/Icons/HomeIcon';
+import ProfileIcon from '../../components/Icons/ProfileIcon';
+import SearchIcon from '../../components/Icons/SearchIcon';
+import MovieCard from '../../components/MovieCard/MovieCard';
+import NavBarLink from '../../components/NavBarLink/NavBarLink';
 import styles from './Cast.module.css';
 
 function Cast(): JSX.Element {
