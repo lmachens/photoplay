@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  padding: 2em;
+  height: 100vh;
+}
+
+.castPortrait {
+  display: flex;
+  justify-content: center;
+}
+
+.navBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: bottom;
+}
