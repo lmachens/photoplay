@@ -7,8 +7,18 @@ export default {
 };
 
 export const email = (): JSX.Element => (
-  <LabeledInput label="Email" placeholder="Email" />
+  <LabeledInput
+    label="Email"
+    placeholder="Email"
+    value=""
+    onChange={console.log}
+  />
 );
 export const password = (): JSX.Element => (
-  <LabeledInput label="Password" placeholder="Password" />
+  <LabeledInput
+    label="Password"
+    placeholder="Password"
+    value=""
+    onChange={console.log}
+  />
 );
