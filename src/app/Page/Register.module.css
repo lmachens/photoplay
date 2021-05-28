@@ -1,0 +1,35 @@
+.registerForm {
+  display: grid;
+}
+
+.registerForm__SVG {
+  justify-self: center;
+  margin-bottom: 10%;
+}
+
+.registerForm__form {
+  grid-row-gap: 4em;
+}
+
+.registerForm__label {
+  grid-row-gap: 2em;
+  display: grid;
+  margin: 0% 7% 0% 7%;
+}
+
+.registerForm__main {
+  grid-row: 2;
+  grid-row-gap: 1em;
+}
+
+.registerForm__header {
+  margin-top: 7%;
+  display: grid;
+}
+
+.registerForm__link {
+  text-decoration: none;
+  color: var(--text-color);
+  margin: auto;
+  margin-bottom: 10%;
+}

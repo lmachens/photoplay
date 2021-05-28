@@ -4,6 +4,10 @@
   font-size: 0.8em;
   padding: 0.8em 2em;
   border: none;
-  border-radius: 0.4em;
+  border-radius: 12px;
   text-transform: uppercase;
+  width: 100%;
+  font-weight: bold;
+  font-family: var(--font-family);
+  height: 3.2em;
 }
