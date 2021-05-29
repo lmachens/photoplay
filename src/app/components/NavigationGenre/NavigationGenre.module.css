@@ -1,13 +1,13 @@
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1em 0;
 }
 .navLink {
   border-left: 1px solid var(--text-color);
   width: 100%;
   text-align: center;
-  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-size: clamp(0.75rem, 2.5vw, 2rem);
   text-decoration: none;
   color: var(--text-color);
 }

@@ -6,8 +6,8 @@
   text-transform: uppercase;
   text-decoration: none;
   position: absolute;
-  top: 1em;
-  left: 1em;
+  top: 1rem;
+  left: 1rem;
 }
 
 .backArrow {

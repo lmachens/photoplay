@@ -13,7 +13,7 @@ function Trailer({ headline, videoSrc }: TrailerProps): JSX.Element {
         <source src={videoSrc} type="video/mp4" />
         <source src={videoSrc} type="video/webm" />
       </video>
-      <h1 className={styles.video__headline}>{headline}</h1>
+      <h3 className={styles.video__headline}>{headline}</h3>
     </>
   );
 }

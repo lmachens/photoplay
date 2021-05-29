@@ -5,11 +5,14 @@
 .episodesHeadline {
   text-align: left;
   padding-left: 0.5em;
+  padding-left: 1rem;
+  font-size: 1.1rem;
 }
 
 .movieDescription {
   padding: 0 2em;
   text-align: left;
+  padding-left: 1rem;
 }
 
 footer {
