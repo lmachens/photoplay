@@ -1,0 +1,40 @@
+.container {
+  background: var(--background-color);
+  display: grid;
+  gap: 1em;
+}
+
+.poster {
+  width: 100%;
+  margin-top: -4.5em;
+}
+
+.watchlistTitle {
+  font-family: var(--font-family);
+  font-size: 0.94em;
+  color: var(--text-color);
+  margin: 0 1em;
+}
+
+.watchlist {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1.5em;
+  padding-left: 1em;
+  overflow-y: scroll;
+  align-items: end;
+}
+
+.watchlist::-webkit-scrollbar {
+  display: none;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 2em;
+  background-color: var(--navbar-background-color);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}

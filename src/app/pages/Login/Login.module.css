@@ -1,0 +1,37 @@
+.container {
+  height: 100vh;
+  background-image: url('/background.png');
+  background-repeat: repeat no-repeat;
+  background-position: center bottom 50vh;
+  padding: 2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  z-index: 1;
+  width: 100%;
+  max-width: 500px;
+}
+
+.form {
+  text-align: left;
+  display: grid;
+  row-gap: 1em;
+}
+
+.hint {
+  color: var(--hint-color);
+}
+
+.fadeOverlay {
+  position: fixed;
+  top: calc(50% - 76px);
+  left: 0;
+  z-index: 0;
+  width: 100%;
+}

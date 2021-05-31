@@ -4,16 +4,30 @@ import styles from './LabeledInput.module.css';
 type LabeledInputProps = {
   label: string;
   placeholder: string;
+  value: string;
+  type?: string;
+  required?: boolean;
+  onChange: (value: string) => void;
 };
 
-function LabeledInput({ label, placeholder }: LabeledInputProps): JSX.Element {
+function LabeledInput({
+  label,
+  placeholder,
+  value,
+  type,
+  required,
+  onChange,
+}: LabeledInputProps): JSX.Element {
   return (
     <label className={styles.container}>
       {label}
       <input
         className={styles.container__input}
-        type="text"
-        placeholder={`${placeholder}` + ' here'}
+        type={type}
+        placeholder={`${placeholder} here`}
+        value={value}
+        required={required}
+        onChange={(event) => onChange(event.target.value)}
       />
     </label>
   );
