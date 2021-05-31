@@ -1,0 +1,5 @@
+@port = {{$dotenv PORT}}
+@baseUrl = http://localhost:{{port}}
+
+### 
+GET {{baseUrl}}/api/movies/popular

@@ -1,6 +1,6 @@
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
-const BACKEND_PORT = process.env.PORT || 6000;
+const BACKEND_PORT = process.env.PORT;
 module.exports = function (app) {
   app.use(
     '/api',
