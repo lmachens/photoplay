@@ -4,7 +4,7 @@ dotenv.config();
 import express from 'express';
 import router from './server/routes';
 
-const { PORT = 3000 } = process.env;
+const { PORT = 6000 } = process.env;
 
 const app = express();
 
