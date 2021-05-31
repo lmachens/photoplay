@@ -11,11 +11,11 @@ export default {
 const socials = [
   {
     icon: <FacebookIcon />,
-    link: '#',
+    link: 'https://de-de.facebook.com/',
   },
   {
     icon: <GoogleIcon />,
-    link: '#',
+    link: 'https://www.google.de/',
   },
 ];
 
