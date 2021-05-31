@@ -21,7 +21,7 @@ function RegisterForm(): JSX.Element {
     <div className={styles.registerForm}>
       <header className={styles.registerForm__header}>
         <BackButton />
-        <ProfilePictureIcon className={styles.registerForm__SVG} />
+        <ProfilePictureIcon className={styles.registerForm__icon} />
 
         <a href="#" className={styles.registerForm__link}>
           Add profile picture
