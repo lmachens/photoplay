@@ -9,4 +9,4 @@ export default {
   },
 };
 
-export const Default = (): JSX.Element => <Homescreen imgSrc="/dora.png" />;
+export const Default = (): JSX.Element => <Homescreen />;

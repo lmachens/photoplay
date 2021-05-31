@@ -1,11 +1,11 @@
 import React from 'react';
 
-type WatchlistProps = {
+type MovieCardProps = {
   imgSrc: string;
 };
 
-function Watchlist({ imgSrc }: WatchlistProps): JSX.Element {
-  return <img src={imgSrc} alt="" />;
+function MovieCard({ imgSrc }: MovieCardProps): JSX.Element {
+  return <img src={imgSrc} alt="Movie poster" />;
 }
 
-export default Watchlist;
+export default MovieCard;

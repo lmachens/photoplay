@@ -9,16 +9,12 @@ import SearchIcon from '../../components/Icons/SearchIcon';
 import DownloadIcon from '../../components/Icons/DownloadIcon';
 import ProfileIcon from '../../components/Icons/ProfileIcon';
 
-type HomescreenProps = {
-  imgSrc: string;
-};
-
 const categoriesArray = ['Movie', 'Adventure', 'Comedy', 'Family'];
 
-function Homescreen({ imgSrc }: HomescreenProps): JSX.Element {
+function Homescreen(): JSX.Element {
   return (
     <main className={styles.container}>
-      <img className={styles.poster} src={imgSrc} />
+      <img className={styles.poster} src="./dora.png" />
       <Rating value={4}></Rating>
       <div className={styles.navigationGenre}>
         <NavigationGenre categories={categoriesArray}></NavigationGenre>
