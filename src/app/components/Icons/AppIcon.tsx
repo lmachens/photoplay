@@ -53,7 +53,7 @@ function AppIcon(): JSX.Element {
             d="M-4965.466,28.96h39.124s18.65-.451,22.474,7.911"
             transform="translate(5120.964 94.68)"
             fill="none"
-            stroke="#ffbb3b"
+            stroke="var(--primary-color)"
             stroke-linecap="square"
             stroke-width="4"
           />
