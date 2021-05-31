@@ -8,10 +8,6 @@
 }
 
 .registerForm__form {
-  grid-row-gap: 4em;
-}
-
-.registerForm__label {
   grid-row-gap: 2em;
   display: grid;
   margin: 0% 7%;

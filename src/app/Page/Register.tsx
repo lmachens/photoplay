@@ -13,8 +13,8 @@ function RegisterForm(): JSX.Element {
   const [confirmPassword, setConfirmPassword] = useState('');
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    alert(`${firstName} submitted`);
     event.preventDefault();
+    alert(`${firstName} submitted`);
   }
 
   return (
@@ -28,54 +28,54 @@ function RegisterForm(): JSX.Element {
         </a>
       </header>
       <main className={styles.registerForm__main}>
-        <div className={styles.registerForm__form}>
-          <form className={styles.registerForm__label} onSubmit={handleSubmit}>
-            <LabeledInput
-              label="First Name"
-              placeholder="First Name"
-              type="text"
-              value={firstName}
-              onChange={setFirstName}
-              required
-            />
-            <LabeledInput
-              label="Last Name"
-              placeholder="Last Name"
-              type="text"
-              value={lastName}
-              onChange={setLastName}
-              required
-            />
-            <LabeledInput
-              label="Email"
-              placeholder="Email"
-              type="email"
-              value={email}
-              onChange={setEmail}
-              required
-            />
+        {/* <div className={styles.registerForm__form}> */}
+        <form className={styles.registerForm__form} onSubmit={handleSubmit}>
+          <LabeledInput
+            label="First Name"
+            placeholder="First Name"
+            type="text"
+            value={firstName}
+            onChange={setFirstName}
+            required
+          />
+          <LabeledInput
+            label="Last Name"
+            placeholder="Last Name"
+            type="text"
+            value={lastName}
+            onChange={setLastName}
+            required
+          />
+          <LabeledInput
+            label="Email"
+            placeholder="Email"
+            type="email"
+            value={email}
+            onChange={setEmail}
+            required
+          />
 
-            <LabeledInput
-              label="Password"
-              placeholder="Password"
-              type="password"
-              value={password}
-              onChange={setPassword}
-              required
-            />
+          <LabeledInput
+            label="Password"
+            placeholder="Password"
+            type="password"
+            value={password}
+            onChange={setPassword}
+            required
+          />
 
-            <LabeledInput
-              label="Confirm Password"
-              placeholder="Confirm Password"
-              type="password"
-              value={confirmPassword}
-              onChange={setConfirmPassword}
-              required
-            />
+          <LabeledInput
+            label="Confirm Password"
+            placeholder="Confirm Password"
+            type="password"
+            value={confirmPassword}
+            onChange={setConfirmPassword}
+            required
+          />
 
-            <Button>Register</Button>
-          </form>
-        </div>
+          <Button>Register</Button>
+        </form>
+        {/* </div> */}
       </main>
     </div>
   );

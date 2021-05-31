@@ -24,7 +24,7 @@ function LabeledInput({
       <input
         className={styles.container__input}
         type={type}
-        placeholder={`${placeholder}` + ' here'}
+        placeholder={`${placeholder} here`}
         value={value}
         required={required}
         onChange={(event) => onChange(event.target.value)}
