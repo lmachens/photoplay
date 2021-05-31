@@ -1,12 +1,8 @@
 import React from 'react';
 import BackButton from '../../components/BackButton/BackButton';
 import CastPortrait from '../../components/CastPortrait/CastPortrait';
-import DownloadIcon from '../../components/Icons/DownloadIcon';
-import HomeIcon from '../../components/Icons/HomeIcon';
-import ProfileIcon from '../../components/Icons/ProfileIcon';
-import SearchIcon from '../../components/Icons/SearchIcon';
 import MovieCard from '../../components/MovieCard/MovieCard';
-import NavBarLink from '../../components/NavBarLink/NavBarLink';
+import NavBar from '../../components/NavBar/NavBar';
 import styles from './Cast.module.css';
 
 function Cast(): JSX.Element {
@@ -40,10 +36,7 @@ function Cast(): JSX.Element {
       </main>
       <footer className={styles.footer}>
         <div className={styles.navBar}>
-          <NavBarLink icon={<HomeIcon />} text="Home" />
-          <NavBarLink icon={<SearchIcon />} text="Search" />
-          <NavBarLink icon={<DownloadIcon />} text="Download" />
-          <NavBarLink icon={<ProfileIcon />} text="Profile" />
+          <NavBar />
         </div>
       </footer>
     </div>
