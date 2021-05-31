@@ -35,9 +35,7 @@ function Cast(): JSX.Element {
         </div>
       </main>
       <footer className={styles.footer}>
-        <div className={styles.navBar}>
-          <NavBar />
-        </div>
+        <NavBar />
       </footer>
     </div>
   );
