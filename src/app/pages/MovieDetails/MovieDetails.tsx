@@ -6,10 +6,12 @@ import styles from './MovieDetails.module.css';
 import Rating from '../../components/Rating/Rating';
 import NavigationGenre from '../../components/NavigationGenre/NavigationGenre';
 import NavBar from '../../components/NavBar/NavBar';
+import { useParams } from 'react-router';
 
 const categoriesArray = ['Movie', 'Adventure', 'Comedy', 'Family'];
 
 function MovieDetails(): JSX.Element {
+  const { name } = useParams<{ name: string }>();
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -17,7 +19,7 @@ function MovieDetails(): JSX.Element {
       </header>
       <main className={styles.main}>
         <div className={styles.MovieTrailer}>
-          <p>Insert movie trailer here</p>
+          <p>{name}</p>
           <NavigationGenre categories={categoriesArray} />
         </div>
         <Rating value={4} />

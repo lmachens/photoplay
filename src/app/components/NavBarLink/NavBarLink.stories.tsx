@@ -11,14 +11,14 @@ export default {
 };
 
 export const Home = (): JSX.Element => (
-  <NavBarLink icon={<HomeIcon />} text="Home" />
+  <NavBarLink icon={<HomeIcon />} text="Home" link="#" />
 );
 export const Search = (): JSX.Element => (
-  <NavBarLink icon={<SearchIcon />} text="Search" />
+  <NavBarLink icon={<SearchIcon />} text="Search" link="#" />
 );
 export const Download = (): JSX.Element => (
-  <NavBarLink icon={<DownloadIcon />} text="Download" />
+  <NavBarLink icon={<DownloadIcon />} text="Download" link="#" />
 );
 export const Profile = (): JSX.Element => (
-  <NavBarLink icon={<ProfileIcon />} text="Profile" />
+  <NavBarLink icon={<ProfileIcon />} text="Profile" link="#" />
 );
