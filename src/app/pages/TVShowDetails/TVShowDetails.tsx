@@ -28,7 +28,7 @@ export default function TVShowDetails(): JSX.Element {
         <EpisodeCard headline="Headline" runtime={120} imgSrc="/matrix.jpg" />
         <EpisodeCard headline="Headline" runtime={120} imgSrc="/matrix.jpg" />
       </main>
-      <footer>
+      <footer className={styles.navBar}>
         <NavBar />
       </footer>
     </div>

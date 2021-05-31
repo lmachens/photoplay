@@ -15,7 +15,7 @@
   padding-left: 1rem;
 }
 
-footer {
+.navBar {
   display: flex;
   justify-content: space-around;
   align-items: center;
