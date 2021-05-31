@@ -1,0 +1,35 @@
+.container {
+  display: grid;
+  height: 100vh;
+  padding: 1em;
+  grid-gap: 1em;
+}
+
+.main {
+  overflow: scroll;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+.castPortrait {
+  display: flex;
+  justify-content: center;
+}
+
+.castDescription {
+  font-weight: 100;
+}
+
+.movieCardTitle {
+  font-weight: 600;
+}
+
+.movieCards {
+  display: grid;
+  column-gap: 1em;
+  width: 100%;
+  grid-auto-flow: column;
+  overflow: scroll;
+}

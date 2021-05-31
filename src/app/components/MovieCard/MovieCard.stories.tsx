@@ -6,12 +6,24 @@ export default {
   component: MovieCard,
 };
 
-export const narcos = (): JSX.Element => <MovieCard imgSrc="/narcos.png" />;
+export const Antman = (): JSX.Element => <MovieCard imgSrc="/antman.png" />;
 
-export const deadpool = (): JSX.Element => <MovieCard imgSrc="/deadpool.png" />;
+export const EndOfWatch = (): JSX.Element => (
+  <MovieCard imgSrc="/endOfWatch.png" />
+);
 
-export const annabelle = (): JSX.Element => (
+export const AmericanHustle = (): JSX.Element => (
+  <MovieCard imgSrc="/americanHustle.png" />
+);
+
+export const Crash = (): JSX.Element => <MovieCard imgSrc="/crash.png" />;
+
+export const Narcos = (): JSX.Element => <MovieCard imgSrc="/narcos.png" />;
+
+export const Deadpool = (): JSX.Element => <MovieCard imgSrc="/deadpool.png" />;
+
+export const Annabelle = (): JSX.Element => (
   <MovieCard imgSrc="/annabelle.png" />
 );
 
-export const toystory = (): JSX.Element => <MovieCard imgSrc="/toystory.png" />;
+export const Toystory = (): JSX.Element => <MovieCard imgSrc="/toystory.png" />;
