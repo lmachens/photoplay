@@ -14,11 +14,3 @@
   color: var(--text-color);
   grid-column: 1/3;
 }
-
-.SocialLogin__link1 {
-  justify-self: end;
-}
-
-.SocialLogin__link2 {
-  justify-self: start;
-}
