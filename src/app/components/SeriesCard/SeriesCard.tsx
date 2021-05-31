@@ -5,17 +5,23 @@ type InputProps = {
   headline: string;
   seriesInfo: string;
   imgSrc: string;
+  imgAlt: string;
 };
 
-function SeriesCard({ headline, seriesInfo, imgSrc }: InputProps): JSX.Element {
+function SeriesCard({
+  headline,
+  seriesInfo,
+  imgSrc,
+  imgAlt,
+}: InputProps): JSX.Element {
   return (
-    <div className={styles.container}>
-      <img className={styles.img} src={imgSrc} />
+    <article className={styles.container}>
+      <img className={styles.img} src={imgSrc} alt={imgAlt} />
       <div className={styles.seriesInfo}>
-        <h3 className={styles.headline}>{headline}</h3>
+        <h3 className={styles.seriesInfo__headline}>{headline}</h3>
         <span className={styles.seriesEpisode}>{seriesInfo}</span>
       </div>
-    </div>
+    </article>
   );
 }
 export default SeriesCard;

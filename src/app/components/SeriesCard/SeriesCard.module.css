@@ -1,5 +1,4 @@
 .container {
-  background: transparent;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 0.8em;
@@ -9,7 +8,7 @@
 .img {
   width: 100%;
   height: auto;
-  grid-column: 1/2;
+  grid-column: 1;
 }
 
 .seriesInfo {
@@ -18,14 +17,12 @@
   justify-content: center;
   gap: 0.5em;
 }
-.headline {
-  grid-column: 2/3;
-  font-weight: 400;
+.seriesInfo__headline {
+  grid-column: 2;
   margin: 0;
 }
 
 .seriesEpisode {
-  grid-column: 2/3;
+  grid-column: 2;
   color: var(--hint-color);
-  font-weight: 400;
 }

@@ -11,9 +11,15 @@ export const The_Kingpin_Strategy = (): JSX.Element => (
     headline="Kingpin Strategy"
     seriesInfo="Test"
     imgSrc="./kingpinStrategy.jpg"
+    imgAlt="Kingpin Strategy"
   />
 );
 
 export const Matrix = (): JSX.Element => (
-  <SeriesCard headline="Matrix" seriesInfo="4 Episodes" imgSrc="./matrix.jpg" />
+  <SeriesCard
+    headline="Matrix"
+    seriesInfo="4 Episodes"
+    imgSrc="./matrix.jpg"
+    imgAlt="Matrix"
+  />
 );
