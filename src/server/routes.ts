@@ -1,5 +1,5 @@
 import express from 'express';
-import { getPopularMovies } from './theMovieDB';
+import { getMovieById, getPopularMovies } from './theMovieDB';
 
 const router = express.Router();
 
@@ -13,8 +13,19 @@ router.get('/movies/popular', async (_req, res) => {
   }
 });
 
-router.get('/movies/:id', (_req, res) => {
-  res.status(404).send();
+router.get('/movies/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const movie = await getMovieById(id);
+    if (!movie) {
+      res.status(404).send();
+      return;
+    }
+    res.status(200).json(movie);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send(error.message || 'Internal server error');
+  }
 });
 
 router.get('/actors/:id', (_req, res) => {

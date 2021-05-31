@@ -7,7 +7,7 @@ if (!THE_MOVIE_DB_KEY) {
 }
 
 const BASE_URL = 'https://api.themoviedb.org/3';
-const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original/';
+const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original';
 
 type ErrorResult = {
   status_message: string;
@@ -66,11 +66,131 @@ type PopularMovie = {
  */
 export async function getPopularMovies(): Promise<PopularMovie[]> {
   const result = await fetchTheMovieDB<PopularMoviesResult>('/movie/popular');
-  const popularMovies = result.results.map((result) => ({
+  const popularMovies: PopularMovie[] = result.results.map((result) => ({
     id: result.id,
     title: result.title,
     posterPath: `${IMAGE_BASE_URL}${result.poster_path}`,
     genreIds: result.genre_ids,
   }));
   return popularMovies;
+}
+
+type MovieResult = {
+  adult: boolean;
+  backdrop_path: string | null;
+  belongs_to_collection: null | unknown;
+  budget: number;
+  genres: {
+    id: number;
+    name: string;
+  }[];
+  homepage: string | null;
+  id: number;
+  imdb_id: string | null;
+  original_language: string;
+  original_title: string;
+  overview: string | null;
+  popularity: number;
+  poster_path: string | null;
+  production_companies: {
+    name: string;
+    id: number;
+    logo_path: string | null;
+    origin_country: string;
+  }[];
+  production_countries: {
+    iso_3166_1: string;
+    name: string;
+  }[];
+  release_date: string;
+  revenue: number;
+  runtime: number | null;
+  spoken_languages: {
+    iso_639_1: string;
+    name: string;
+  }[];
+  status:
+    | 'Rumored'
+    | 'Planned'
+    | 'In Production'
+    | 'Post Production'
+    | 'Released'
+    | 'Canceled';
+  tagline: string | null;
+  title: string;
+  video: boolean;
+  vote_average: number;
+  vote_count: number;
+};
+
+type CreditsResult = {
+  id: number;
+  cast: {
+    adult: boolean;
+    gender: number | null;
+    id: number;
+    known_for_department: string;
+    name: string;
+    original_name: string;
+    popularity: string;
+    profile_path: string;
+    cast_id: number;
+    character: string;
+    credit_id: string;
+    order: number;
+  }[];
+  crew: {
+    adult: boolean;
+    gender: number | null;
+    id: number;
+    known_for_department: string;
+    name: string;
+    original_name: string;
+    popularity: string;
+    profile_path: string;
+    credit_id: string;
+    department: string;
+    job: string;
+  }[];
+};
+type Movie = {
+  id: number;
+  title: string;
+  tagline: string | null;
+  video: boolean;
+  posterPath: string;
+  genres: {
+    id: number;
+    name: string;
+  }[];
+  actors: {
+    id: number;
+    name: string;
+    profilePath: string;
+  }[];
+};
+/**
+ * Get the primary information about a movie.
+ * https://developers.themoviedb.org/3/movies/get-movie-details
+ */
+export async function getMovieById(id: string): Promise<Movie> {
+  const [movieResult, creditsResult] = await Promise.all([
+    fetchTheMovieDB<MovieResult>(`/movie/${id}`),
+    fetchTheMovieDB<CreditsResult>(`/movie/${id}/credits`),
+  ]);
+
+  const movie: Movie = {
+    id: movieResult.id,
+    title: movieResult.title,
+    tagline: movieResult.tagline,
+    video: movieResult.video,
+    posterPath: `${IMAGE_BASE_URL}${movieResult.poster_path}`,
+    genres: movieResult.genres,
+    actors: creditsResult.cast.map((actor) => ({
+      id: actor.id,
+      name: actor.name,
+      profilePath: `${IMAGE_BASE_URL}${actor.profile_path}`,
+    })),
+  };
+  return movie;
 }
