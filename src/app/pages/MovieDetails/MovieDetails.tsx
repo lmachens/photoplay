@@ -17,7 +17,6 @@ function MovieDetails(): JSX.Element {
       </header>
       <main className={styles.main}>
         <div className={styles.MovieTrailer}>
-          {/* <<MovieTrailer/>> */}
           <p>Insert movie trailer here</p>
           <NavigationGenre categories={categoriesArray} />
         </div>
