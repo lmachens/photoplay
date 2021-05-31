@@ -8,21 +8,17 @@ export default {
 
 export const email = (): JSX.Element => (
   <LabeledInput
-    value=""
-    onChange={(event) => {
-      return event;
-    }}
     label="Email"
     placeholder="Email"
+    value=""
+    onChange={console.log}
   />
 );
 export const password = (): JSX.Element => (
   <LabeledInput
-    value=""
-    onChange={(event) => {
-      return event;
-    }}
     label="Password"
     placeholder="Password"
+    value=""
+    onChange={console.log}
   />
 );
