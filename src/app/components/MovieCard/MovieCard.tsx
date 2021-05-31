@@ -7,9 +7,11 @@ type CardProps = {
 
 function MovieCard({ imgSrc }: CardProps): JSX.Element {
   return (
-    <div>
-      <img className={styles.image} src={imgSrc} alt="" />
-    </div>
+    <img
+      className={styles.image}
+      src={imgSrc}
+      alt="This is a picture of a movie"
+    />
   );
 }
 

@@ -13,7 +13,7 @@ function Cast(): JSX.Element {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <BackButton></BackButton>
+        <BackButton />
       </header>
       <main className={styles.main}>
         <div className={styles.castPortrait}>
