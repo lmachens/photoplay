@@ -7,11 +7,7 @@ import NotificationsIcon from '../../components/Icons/Notifications';
 import SettingsIcon from '../../components/Icons/SettingsIcon';
 import HelpIcon from '../../components/Icons/HelpIcon';
 import LogoutIcon from '../../components/Icons/LogoutIcon';
-import NavBarLink from '../../components/NavBarLink/NavBarLink';
-import HomeIcon from '../../components/Icons/HomeIcon';
-import SearchIcon from '../../components/Icons/SearchIcon';
-import DownloadIcon from '../../components/Icons/DownloadIcon';
-import ProfileIcon from '../../components/Icons/ProfileIcon';
+import NavBar from '../../components/NavBar/NavBar';
 
 function Profile(): JSX.Element {
   return (
@@ -32,11 +28,8 @@ function Profile(): JSX.Element {
         <ProfileMenuBar link="#" icon={<HelpIcon />} text="Help" />
         <ProfileMenuBar link="#" icon={<LogoutIcon />} text="Logout" />
       </main>
-      <footer className={styles.footer}>
-        <NavBarLink icon={<HomeIcon />} text="Home" />
-        <NavBarLink icon={<SearchIcon />} text="Search" />
-        <NavBarLink icon={<DownloadIcon />} text="Download" />
-        <NavBarLink icon={<ProfileIcon />} text="Profile" />
+      <footer>
+        <NavBar />
       </footer>
     </div>
   );

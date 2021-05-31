@@ -34,10 +34,3 @@
 .profileMenu :last-child {
   border: none;
 }
-
-.footer {
-  display: flex;
-  justify-content: space-around;
-  padding: 1.5em;
-  background: var(--secondary-color);
-}
