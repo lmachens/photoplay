@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.8em;
+  font-size: 3vw;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  grid-column: 1;
+}
+
+.seriesInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5em;
+}
+.seriesInfo__headline {
+  grid-column: 2;
+  margin: 0;
+}
+
+.seriesEpisode {
+  grid-column: 2;
+  color: var(--hint-color);
+}

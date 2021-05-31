@@ -1,0 +1,20 @@
+.backButton {
+  font-family: var(--font-family);
+  border: none;
+  background: transparent;
+  color: var(--hint-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: bold;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.backArrow {
+  font-size: 1.4em;
+  position: relative;
+  top: 0.15em;
+  padding-right: 0.2em;
+}

@@ -1,0 +1,12 @@
+.link {
+  text-decoration: none;
+  color: var(--text-color);
+  fill: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 1.4em;
+  font-size: 1.1em;
+  border-bottom: solid 0.1em rgba(255, 255, 255, 0.26);
+  padding-bottom: 0.9em;
+  padding-left: 1em;
+}

@@ -25,8 +25,8 @@ function AppIcon(): JSX.Element {
           transform="translate(131 300)"
           fill="var(--primary-color)"
           font-size="16"
-          font-family="Gotham-Light, Gotham"
-          font-weight="300"
+          font-family="var(--font-family)"
+          font-weight="bold"
           letter-spacing="0.076em"
         >
           <tspan x="0" y="0">
@@ -47,13 +47,13 @@ function AppIcon(): JSX.Element {
           <path
             d="M13.148,0A13.148,13.148,0,1,0,26.3,13.148,13.147,13.147,0,0,0,13.148,0Zm6.291,14.2L11.6,19.6a1.281,1.281,0,0,1-2.008-1.055V7.752A1.281,1.281,0,0,1,11.6,6.7l7.842,5.4a1.281,1.281,0,0,1,0,2.111Z"
             transform="translate(173.2 139.816)"
-            fill="#ffbb3b"
+            fill="var(--primary-color)"
           />
           <path
             d="M-4965.466,28.96h39.124s18.65-.451,22.474,7.911"
             transform="translate(5120.964 94.68)"
             fill="none"
-            stroke="#ffbb3b"
+            stroke="var(--primary-color)"
             stroke-linecap="square"
             stroke-width="4"
           />
