@@ -3,11 +3,7 @@ import NavigationGenre from '../../components/NavigationGenre/NavigationGenre';
 import Rating from '../../components/Rating/Rating';
 import MovieCard from '../../components/MovieCard/MovieCard';
 import styles from './Homescreen.module.css';
-import NavBarLink from '../../components/NavBarLink/NavBarLink';
-import HomeIcon from '../../components/Icons/HomeIcon';
-import SearchIcon from '../../components/Icons/SearchIcon';
-import DownloadIcon from '../../components/Icons/DownloadIcon';
-import ProfileIcon from '../../components/Icons/ProfileIcon';
+import NavBar from '../../components/NavBar/NavBar';
 
 const categoriesArray = ['Movie', 'Adventure', 'Comedy', 'Family'];
 
@@ -26,12 +22,7 @@ function Homescreen(): JSX.Element {
         <MovieCard imgSrc="/annabelle.png"></MovieCard>
         <MovieCard imgSrc="/toystory.png"></MovieCard>
       </div>
-      <div className={styles.navBar}>
-        <NavBarLink icon={<HomeIcon />} text="Home" />
-        <NavBarLink icon={<SearchIcon />} text="Search" />
-        <NavBarLink icon={<DownloadIcon />} text="Download" />
-        <NavBarLink icon={<ProfileIcon />} text="Profile" />
-      </div>
+      <NavBar />
     </main>
   );
 }
