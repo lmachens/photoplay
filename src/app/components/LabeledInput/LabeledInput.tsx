@@ -13,8 +13,8 @@ type LabeledInputProps = {
 function LabeledInput({
   label,
   placeholder,
-  type,
   value,
+  type,
   required,
   onChange,
 }: LabeledInputProps): JSX.Element {

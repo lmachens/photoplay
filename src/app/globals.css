@@ -54,3 +54,9 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
 }
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+}
