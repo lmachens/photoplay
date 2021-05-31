@@ -31,11 +31,5 @@
   column-gap: 1em;
   width: 100%;
   grid-auto-flow: column;
-  overflow: overlay;
-}
-
-.navBar {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: bottom;
+  overflow: scroll;
 }
