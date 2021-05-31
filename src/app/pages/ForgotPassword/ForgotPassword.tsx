@@ -10,7 +10,7 @@ function ForgotPassword(): JSX.Element {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    alert(`We'll send you new password to ${email}`);
+    alert(`We'll send your new password to ${email}`);
   }
 
   return (
