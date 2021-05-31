@@ -28,7 +28,6 @@ function RegisterForm(): JSX.Element {
         </a>
       </header>
       <main className={styles.registerForm__main}>
-        {/* <div className={styles.registerForm__form}> */}
         <form className={styles.registerForm__form} onSubmit={handleSubmit}>
           <LabeledInput
             label="First Name"
@@ -75,7 +74,6 @@ function RegisterForm(): JSX.Element {
 
           <Button>Register</Button>
         </form>
-        {/* </div> */}
       </main>
     </div>
   );
