@@ -5,6 +5,9 @@
   color: var(--text-color);
   text-transform: uppercase;
   text-decoration: none;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
 }
 
 .backArrow {
