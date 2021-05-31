@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './SocialLogin.module.css';
 
 type SocialLoginProps = {
-  icon: React.SVGProps<SVGSVGElement>;
+  icon: JSX.Element;
   link: string;
 };
 
