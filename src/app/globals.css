@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
 
 *,
 *::after,
@@ -11,7 +11,13 @@
   --font-family: 'Montserrat', sans-serif;
 
   /* COLORS */
-  --primary-gradient: linear-gradient(180deg, #ffbb3b, #ffa90a);
+  --primary-gradient-from: #ffbb3b;
+  --primary-gradient-to: #ffa90a;
+  --primary-gradient: linear-gradient(
+    180deg,
+    var(--primary-gradient-from),
+    var(--primary-gradient-to)
+  );
   --primary-color: #ffbb3b;
   --secondary-color: #212121;
   --text-color: #fff;
