@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+import { Movie, PopularMovie } from '../types';
 
 const { THE_MOVIE_DB_KEY } = process.env;
 
@@ -25,7 +26,8 @@ async function fetchTheMovieDB<T>(path: string, query = ''): Promise<T> {
     const errorResult: ErrorResult = await response.json();
     throw {
       message: errorResult.status_message,
-      code: errorResult.status_code,
+      theMovieDBCode: errorResult.status_code,
+      status: response.status,
     };
   }
   const result: T = await response.json();
@@ -54,12 +56,6 @@ type PopularMoviesResult = {
   total_pages: number;
 };
 
-type PopularMovie = {
-  id: number;
-  title: string;
-  genreIds: number[];
-  posterPath: string | null;
-};
 /**
  * Get a list of the current popular movies on TMDB. This list updates daily.
  * https://developers.themoviedb.org/3/movies/get-popular-movies
@@ -153,22 +149,7 @@ type CreditsResult = {
     job: string;
   }[];
 };
-type Movie = {
-  id: number;
-  title: string;
-  tagline: string | null;
-  video: boolean;
-  posterPath: string;
-  genres: {
-    id: number;
-    name: string;
-  }[];
-  actors: {
-    id: number;
-    name: string;
-    profilePath: string;
-  }[];
-};
+
 /**
  * Get the primary information about a movie.
  * https://developers.themoviedb.org/3/movies/get-movie-details
