@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const BACKEND_PORT = process.env.PORT;
