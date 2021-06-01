@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import BackButton from '../../components/BackButton/BackButton';
@@ -11,8 +11,24 @@ import NavBar from '../../components/NavBar/NavBar';
 
 const categoriesArray = ['Movie', 'Adventure', 'Comedy', 'Family'];
 
+type MovieType = {
+  title: string;
+  genres: [];
+  poster_path: string | null;
+  vote_average: number;
+  tagline: string | null;
+};
+
 function MovieDetails(): JSX.Element {
-  const { name } = useParams<{ name: string }>();
+  const { id } = useParams<{ id: string }>();
+  const [movie, setMovie] = useState<MovieType>();
+  console.log(movie);
+
+  useEffect(() => {
+    fetch(`api/movies/${id}`)
+      .then((response) => response.json())
+      .then((movie) => setMovie(movie));
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -21,7 +37,7 @@ function MovieDetails(): JSX.Element {
       </header>
       <main className={styles.main}>
         <div className={styles.MovieTrailer}>
-          <p>{name}</p>
+          <p>{}</p>
           <NavigationGenre categories={categoriesArray} />
         </div>
         <Rating value={4} />
