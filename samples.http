@@ -1,0 +1,11 @@
+@port = {{$dotenv PORT}}
+@baseUrl = http://localhost:{{port}}
+ 
+### Popular movies
+GET {{baseUrl}}/api/movies/popular
+
+### Army of the Dead
+GET {{baseUrl}}/api/movies/503736
+
+### Not found
+GET {{baseUrl}}/api/movies/philipps_adventure
