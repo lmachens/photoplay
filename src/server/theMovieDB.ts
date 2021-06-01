@@ -26,7 +26,8 @@ async function fetchTheMovieDB<T>(path: string, query = ''): Promise<T> {
     const errorResult: ErrorResult = await response.json();
     throw {
       message: errorResult.status_message,
-      code: errorResult.status_code,
+      theMovieDBCode: errorResult.status_code,
+      status: response.status,
     };
   }
   const result: T = await response.json();
