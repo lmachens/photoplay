@@ -5,7 +5,6 @@ import MovieCard from '../../components/MovieCard/MovieCard';
 import styles from './Homescreen.module.css';
 import NavBar from '../../components/NavBar/NavBar';
 import usePopularMovies from '../../hooks/usePopularMovies';
-import { pathToFileURL } from 'url';
 
 const categoriesArray = ['Movie', 'Adventure', 'Comedy', 'Family'];
 
