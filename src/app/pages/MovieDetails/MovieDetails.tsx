@@ -8,27 +8,21 @@ import styles from './MovieDetails.module.css';
 import Rating from '../../components/Rating/Rating';
 import NavigationGenre from '../../components/NavigationGenre/NavigationGenre';
 import NavBar from '../../components/NavBar/NavBar';
+import { Movie } from '../../../types';
 
 const categoriesArray = ['Movie', 'Adventure', 'Comedy', 'Family'];
 
-type MovieType = {
-  title: string;
-  genres: [];
-  poster_path: string | null;
-  vote_average: number;
-  tagline: string | null;
-};
-
 function MovieDetails(): JSX.Element {
   const { id } = useParams<{ id: string }>();
-  const [movie, setMovie] = useState<MovieType>();
-  console.log(movie);
+  const [movie, setMovie] = useState<Movie>();
 
   useEffect(() => {
     fetch(`api/movies/${id}`)
       .then((response) => response.json())
       .then((movie) => setMovie(movie));
   }, []);
+
+  console.log(movie);
 
   return (
     <div className={styles.container}>
