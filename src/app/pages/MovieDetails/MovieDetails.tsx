@@ -8,11 +8,25 @@ import styles from './MovieDetails.module.css';
 import Rating from '../../components/Rating/Rating';
 import NavigationGenre from '../../components/NavigationGenre/NavigationGenre';
 import NavBar from '../../components/NavBar/NavBar';
-
-const categoriesArray = ['Movie', 'Adventure', 'Comedy', 'Family'];
+import useMovie from '../../hooks/useMovie';
 
 function MovieDetails(): JSX.Element {
-  const { name } = useParams<{ name: string }>();
+  const { id } = useParams<{ id: string }>();
+  const { movie, isLoading, errorMessage } = useMovie(id);
+
+  if (errorMessage) {
+    return <div>Error</div>;
+  }
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!movie) {
+    return <div>Movie not found</div>;
+  }
+
+  const genresArray = movie.genres.map((genre) => genre.name);
 
   return (
     <div className={styles.container}>
@@ -21,14 +35,12 @@ function MovieDetails(): JSX.Element {
       </header>
       <main className={styles.main}>
         <div className={styles.MovieTrailer}>
-          <p>{name}</p>
-          <NavigationGenre categories={categoriesArray} />
+          <img className={styles.movieImage} src={movie.posterPath} />
+          <p>{movie.title}</p>
+          <NavigationGenre categories={genresArray} />
         </div>
         <Rating value={4} />
-        <p className={styles.movieDescription}>
-          Having spent most of her life exploring the jungle, nothing could
-          prepare Dora for her most dangerous adventure yet — high school.
-        </p>
+        <p className={styles.movieDescription}>{movie.tagline}</p>
         <Button>Watch now</Button>
         <div>
           <p className={styles.artistCardTitle}>Cast</p>

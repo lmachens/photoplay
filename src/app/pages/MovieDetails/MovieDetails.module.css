@@ -12,6 +12,10 @@
   display: none;
 }
 
+.movieImage {
+  width: 100%;
+}
+
 .movieDescription {
   font-weight: 100;
 }
