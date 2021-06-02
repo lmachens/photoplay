@@ -11,7 +11,9 @@ const { PORT } = process.env;
 
 const app = express();
 
+// Middleware that parses json and looks at requests where the Content-Type header matches the type option.
 app.use(express.json());
+// Middleware that parses Cookie header and populate req.cookies with an object keyed by the cookie names.
 app.use(cookieParser());
 
 app.use('/api', router);
