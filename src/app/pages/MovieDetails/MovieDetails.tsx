@@ -48,9 +48,7 @@ function MovieDetails(): JSX.Element {
           <Cast actors={movie.actors} />
         </div>
       </main>
-      <footer className={styles.footer}>
-        <NavBar />
-      </footer>
+      <footer className={styles.footer}>{/* <NavBar /> */}</footer>
     </div>
   );
 }
