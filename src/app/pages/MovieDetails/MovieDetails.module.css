@@ -43,7 +43,7 @@
 }
 
 .movieTitle {
-  font-size: 1.5em;
+  font-size: clamp(1.7rem, 2.5vw, 2.5rem);
 }
 
 .movieButton {
