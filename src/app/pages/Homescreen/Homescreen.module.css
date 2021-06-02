@@ -2,11 +2,13 @@
   background: var(--background-color);
   display: grid;
   gap: 1em;
+  height: 100vh;
 }
 
 .poster {
   width: 100%;
-  margin-top: -4.5em;
+  height: 55vh;
+  grid-row: 1;
 }
 
 .watchlistTitle {
@@ -23,6 +25,7 @@
   padding-left: 1em;
   overflow-y: scroll;
   align-items: end;
+  padding-bottom: 5em;
 }
 
 .watchlist::-webkit-scrollbar {
