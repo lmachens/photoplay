@@ -3,12 +3,12 @@ import { useParams } from 'react-router-dom';
 
 import BackButton from '../../components/BackButton/BackButton';
 import Button from '../../components/Button/Button';
-import ArtistCard from '../../components/ArtistCard/ArtistCard';
 import styles from './MovieDetails.module.css';
 import Rating from '../../components/Rating/Rating';
 import NavigationGenre from '../../components/NavigationGenre/NavigationGenre';
 import NavBar from '../../components/NavBar/NavBar';
 import useMovie from '../../hooks/useMovie';
+import Cast from '../../components/Cast/Cast';
 
 function MovieDetails(): JSX.Element {
   const { id } = useParams<{ id: string }>();
@@ -45,11 +45,7 @@ function MovieDetails(): JSX.Element {
         <div>
           <p className={styles.artistCardTitle}>Cast</p>
 
-          <div className={styles.artistCards}>
-            {movie.actors.map((actor) => (
-              <ArtistCard imgSrc={actor.profilePath} artistName={actor.name} />
-            ))}
-          </div>
+          <Cast actors={movie.actors} />
         </div>
       </main>
       <footer className={styles.footer}>
