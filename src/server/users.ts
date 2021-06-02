@@ -12,6 +12,7 @@ function getUsersCollection(): Collection<User> {
 export async function createUsersCollection(): Promise<void> {
   const collections = await getDB().listCollections().toArray();
   if (collections.some((collection) => collection.name === 'users')) {
+    // Users collection already exsists
     return;
   }
 

@@ -1,6 +1,9 @@
 import { Collection, Db, MongoClient } from 'mongodb';
 
 let client: MongoClient;
+/**
+ * Connects to a MongoClient based on `process.env.MONGODB_URL`.
+ */
 export async function connectMongoClient(): Promise<void> {
   const { MONGODB_URL } = process.env;
 
@@ -16,7 +19,7 @@ export async function connectMongoClient(): Promise<void> {
   await client.connect();
 }
 
-export function discconectMongoClient(): void {
+export function disconectMongoClient(): void {
   client.close();
 }
 
