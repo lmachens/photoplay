@@ -34,7 +34,9 @@ function MovieDetails(): JSX.Element {
         <BackButton></BackButton>
       </header>
       <main className={styles.main}>
-        <img className={styles.movieImage} src={movie.posterPath} />
+        <div className={styles.movieVignette}>
+          <img className={styles.movieImage} src={movie.posterPath} />
+        </div>
         <div className={styles.movieTitleGenre}>
           <p className={styles.movieTitle}>{movie.title}</p>
           <NavigationGenre categories={genresArray} />

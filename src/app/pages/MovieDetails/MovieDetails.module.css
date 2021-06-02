@@ -13,7 +13,22 @@
 
 .movieImage {
   width: 100%;
-  grid-row: 1;
+  z-index: -1;
+  position: relative;
+}
+
+.movieVignette {
+  box-shadow: inset 0 -5em 7em black, inset 0 5em 7em black;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.movieTitleGenre {
+  padding: 2em;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-self: end;
+  z-index: 10;
 }
 
 .movieDescription {
@@ -52,8 +67,4 @@
 .movieButton {
   width: 40%;
   justify-self: center;
-}
-
-.movieTitleGenre {
-  padding: 2em;
 }
