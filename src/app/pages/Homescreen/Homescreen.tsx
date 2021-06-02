@@ -4,23 +4,23 @@ import Rating from '../../components/Rating/Rating';
 import MovieCard from '../../components/MovieCard/MovieCard';
 import styles from './Homescreen.module.css';
 import NavBar from '../../components/NavBar/NavBar';
-import { PopularMovie } from '../../../types';
+import usePopularMovies from '../../hooks/usePopularMovies';
 
 const categoriesArray = ['Movie', 'Adventure', 'Comedy', 'Family'];
 
 function Homescreen(): JSX.Element {
-  const [popularMovies, setPopularMovies] = useState<PopularMovie[] | null>(
-    null
-  );
+  const { popularMovies, isLoading, errorMessage } = usePopularMovies();
 
-  useEffect(() => {
-    fetch('api/movies/popular')
-      .then((response) => response.json())
-      .then(setPopularMovies);
-  });
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (errorMessage) {
+    return <div>Error: {errorMessage}</div>;
+  }
 
   if (!popularMovies) {
-    return <div>Loading...</div>;
+    return <div>Movie not found</div>;
   }
 
   return (
