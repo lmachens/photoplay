@@ -1,10 +1,10 @@
 .container {
-  display: grid;
   height: 100vh;
 }
 .main {
   overflow: scroll;
   padding-bottom: 4em;
+  display: grid;
 }
 
 .main::-webkit-scrollbar {
@@ -13,6 +13,7 @@
 
 .movieImage {
   width: 100%;
+  grid-row: 1;
 }
 
 .movieDescription {
@@ -39,4 +40,13 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: bottom;
+}
+
+.movieTitle {
+  font-size: 1.5em;
+}
+
+.movieButton {
+  width: 40%;
+  justify-self: center;
 }
