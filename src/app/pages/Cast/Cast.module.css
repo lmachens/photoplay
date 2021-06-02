@@ -10,10 +10,6 @@
   overflow: scroll;
 }
 
-.main::-webkit-scrollbar {
-  display: none;
-}
-
 .castPortrait {
   display: flex;
   justify-content: center;
@@ -33,4 +29,9 @@
   width: 100%;
   grid-auto-flow: column;
   overflow: scroll;
+}
+
+.main::-webkit-scrollbar,
+.movieCards::-webkit-scrollbar {
+  display: none;
 }
