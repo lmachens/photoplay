@@ -10,7 +10,7 @@ function ArtistCard({ imgSrc, artistName }: CardProps): JSX.Element {
   return (
     <div className={styles.container}>
       <img className={styles.container__image} src={imgSrc} alt="" />
-      <h3 className={styles.container__name}>{artistName}</h3>
+      <span className={styles.container__name}>{artistName}</span>
     </div>
   );
 }

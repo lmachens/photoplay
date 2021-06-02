@@ -24,14 +24,6 @@
   font-weight: 600;
 }
 
-.artistCards {
-  display: grid;
-  column-gap: 1em;
-  width: 100%;
-  grid-auto-flow: column;
-  overflow: scroll;
-}
-
 .navBar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -1,6 +1,6 @@
 import React from 'react';
 import ArtistCard from '../ArtistCard/ArtistCard';
-import styles from './MovieDetails.module.css';
+import styles from './Cast.module.css';
 
 export type CastProps = {
   actors: Array<{
