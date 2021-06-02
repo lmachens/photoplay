@@ -45,22 +45,9 @@ function MovieDetails(): JSX.Element {
         <div>
           <p className={styles.artistCardTitle}>Cast</p>
           <div className={styles.artistCards}>
-            <ArtistCard
-              imgSrc={'./michaelPena.png'}
-              artistName="Michael Peña"
-            />
-            <ArtistCard
-              imgSrc={'./michaelPena.png'}
-              artistName="Michael Peña"
-            />
-            <ArtistCard
-              imgSrc={'./michaelPena.png'}
-              artistName="Michael Peña"
-            />
-            <ArtistCard
-              imgSrc={'./michaelPena.png'}
-              artistName="Michael Peña"
-            />
+            {movie.actors.map((actor) => (
+              <ArtistCard imgSrc={actor.profilePath} artistName={actor.name} />
+            ))}
           </div>
         </div>
       </main>
