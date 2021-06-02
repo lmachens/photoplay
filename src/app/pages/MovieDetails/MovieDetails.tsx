@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import BackButton from '../../components/BackButton/BackButton';
@@ -11,9 +11,36 @@ import NavBar from '../../components/NavBar/NavBar';
 
 const categoriesArray = ['Movie', 'Adventure', 'Comedy', 'Family'];
 
-function MovieDetails(): JSX.Element {
-  const { name } = useParams<{ name: string }>();
+type Movie = {
+  id: number;
+  title: string;
+  tagline: string | null;
+  video: boolean;
+  posterPath: string;
+  genres: {
+    id: number;
+    name: string;
+  }[];
+  actors: {
+    id: number;
+    name: string;
+    profilePath: string;
+  }[];
+};
 
+function MovieDetails(): JSX.Element {
+  const { id } = useParams<{ id: string }>();
+  const [movie, setMovie] = useState<Movie | null>();
+
+  useEffect(() => {
+    fetch(`/api/movies/${id}`)
+      .then((response) => response.json())
+      .then(setMovie);
+  }, []);
+
+  if (!movie) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -21,14 +48,12 @@ function MovieDetails(): JSX.Element {
       </header>
       <main className={styles.main}>
         <div className={styles.MovieTrailer}>
-          <p>{name}</p>
+          <img className={styles.movieImage} src={movie.posterPath} />
+          <p>{movie.title}</p>
           <NavigationGenre categories={categoriesArray} />
         </div>
         <Rating value={4} />
-        <p className={styles.movieDescription}>
-          Having spent most of her life exploring the jungle, nothing could
-          prepare Dora for her most dangerous adventure yet — high school.
-        </p>
+        <p className={styles.movieDescription}>{movie.tagline}</p>
         <Button>Watch now</Button>
         <div>
           <p className={styles.artistCardTitle}>Cast</p>
