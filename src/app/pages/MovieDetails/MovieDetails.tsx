@@ -27,6 +27,8 @@ function MovieDetails(): JSX.Element {
   }
 
   const genresArray = movie.genres.map((genre) => genre.name);
+  const castName = movie.actors.map((actor) => actor.name);
+  const castImg = movie.actors.map((actor) => actor.profilePath);
 
   return (
     <div className={styles.container}>
@@ -44,23 +46,11 @@ function MovieDetails(): JSX.Element {
         <Button>Watch now</Button>
         <div>
           <p className={styles.artistCardTitle}>Cast</p>
+
           <div className={styles.artistCards}>
-            <ArtistCard
-              imgSrc={'./michaelPena.png'}
-              artistName="Michael Peña"
-            />
-            <ArtistCard
-              imgSrc={'./michaelPena.png'}
-              artistName="Michael Peña"
-            />
-            <ArtistCard
-              imgSrc={'./michaelPena.png'}
-              artistName="Michael Peña"
-            />
-            <ArtistCard
-              imgSrc={'./michaelPena.png'}
-              artistName="Michael Peña"
-            />
+            {movie.actors.map((actor) => (
+              <ArtistCard imgSrc={actor.profilePath} artistName={actor.name} />
+            ))}
           </div>
         </div>
       </main>
