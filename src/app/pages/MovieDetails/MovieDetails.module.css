@@ -18,10 +18,12 @@
 
 .movieDescription {
   font-weight: 100;
+  padding: 0 2em;
 }
 
 .artistCardTitle {
   font-weight: 600;
+  padding: 0 2em;
 }
 
 .artistCards {
@@ -30,6 +32,7 @@
   width: 100%;
   grid-auto-flow: column;
   overflow: scroll;
+  padding: 0 2em;
 }
 
 .artistCards::-webkit-scrollbar {
@@ -49,4 +52,8 @@
 .movieButton {
   width: 40%;
   justify-self: center;
+}
+
+.movieTitleGenre {
+  padding: 2em;
 }
