@@ -19,10 +19,3 @@
   margin: 0 auto;
   max-width: 15em;
 }
-
-.navBar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1em;
-}
