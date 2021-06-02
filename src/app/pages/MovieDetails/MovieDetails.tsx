@@ -17,12 +17,14 @@ function MovieDetails(): JSX.Element {
   const [movie, setMovie] = useState<Movie>();
 
   useEffect(() => {
-    fetch(`api/movies/${id}`)
+    fetch(`/api/movies/${id}`)
       .then((response) => response.json())
       .then((movie) => setMovie(movie));
   }, []);
 
-  console.log(movie);
+  if (!movie) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className={styles.container}>
@@ -31,14 +33,12 @@ function MovieDetails(): JSX.Element {
       </header>
       <main className={styles.main}>
         <div className={styles.MovieTrailer}>
-          <p>{}</p>
+          <img src={movie.posterPath} alt="" />
+          <p>{movie.title}</p>
           <NavigationGenre categories={categoriesArray} />
         </div>
         <Rating value={4} />
-        <p className={styles.movieDescription}>
-          Having spent most of her life exploring the jungle, nothing could
-          prepare Dora for her most dangerous adventure yet — high school.
-        </p>
+        <p className={styles.movieDescription}>{movie.tagline}</p>
         <Button>Watch now</Button>
         <div>
           <p className={styles.artistCardTitle}>Cast</p>
