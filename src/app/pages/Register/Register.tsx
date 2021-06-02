@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import LabeledInput from '../components/LabeledInput/LabeledInput';
+import LabeledInput from '../../components/LabeledInput/LabeledInput';
 import styles from './Register.module.css';
-import Button from '../components/Button/Button';
-import BackButton from '../components/BackButton/BackButton';
-import ProfilePictureIcon from '../components/Icons/ProfilePictureIcon';
+import Button from '../../components/Button/Button';
+import BackButton from '../../components/BackButton/BackButton';
+import ProfilePictureIcon from '../../components/Icons/ProfilePictureIcon';
 
 function RegisterForm(): JSX.Element {
   const [firstName, setFirstName] = useState('');
