@@ -5,6 +5,7 @@ import MovieCard from '../../components/MovieCard/MovieCard';
 import styles from './Homescreen.module.css';
 import NavBar from '../../components/NavBar/NavBar';
 import usePopularMovies from '../../hooks/usePopularMovies';
+import { pathToFileURL } from 'url';
 
 const categoriesArray = ['Movie', 'Adventure', 'Comedy', 'Family'];
 
@@ -32,10 +33,12 @@ function Homescreen(): JSX.Element {
       </div>
       <h2 className={styles.watchlistTitle}>Watching</h2>
       <div className={styles.watchlist}>
-        <MovieCard imgSrc="/narcos.png"></MovieCard>
-        <MovieCard imgSrc="/deadpool.png"></MovieCard>
-        <MovieCard imgSrc="/annabelle.png"></MovieCard>
-        <MovieCard imgSrc="/toystory.png"></MovieCard>
+        {popularMovies.map((popularMovie) => (
+          <MovieCard
+            key={popularMovie.id}
+            imgSrc={popularMovie.posterPath || ''}
+          />
+        ))}
       </div>
       <NavBar />
     </main>
