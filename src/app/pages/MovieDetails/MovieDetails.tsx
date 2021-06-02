@@ -10,8 +10,6 @@ import NavigationGenre from '../../components/NavigationGenre/NavigationGenre';
 import NavBar from '../../components/NavBar/NavBar';
 import useMovie from '../../hooks/useMovie';
 
-const categoriesArray = ['Movie', 'Adventure', 'Comedy', 'Family'];
-
 function MovieDetails(): JSX.Element {
   const { id } = useParams<{ id: string }>();
   const { movie, isLoading, errorMessage } = useMovie(id);
@@ -28,6 +26,8 @@ function MovieDetails(): JSX.Element {
     return <div>Movie not found</div>;
   }
 
+  const genresArray = movie.genres.map((genre) => genre.name);
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -37,7 +37,7 @@ function MovieDetails(): JSX.Element {
         <div className={styles.MovieTrailer}>
           <img className={styles.movieImage} src={movie.posterPath} />
           <p>{movie.title}</p>
-          <NavigationGenre categories={categoriesArray} />
+          <NavigationGenre categories={genresArray} />
         </div>
         <Rating value={4} />
         <p className={styles.movieDescription}>{movie.tagline}</p>
