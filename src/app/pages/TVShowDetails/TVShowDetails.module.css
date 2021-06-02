@@ -15,6 +15,11 @@
   padding-left: 1rem;
 }
 
+.button {
+  margin: 0 auto;
+  max-width: 15em;
+}
+
 .navBar {
   display: flex;
   justify-content: space-around;
