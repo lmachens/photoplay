@@ -12,7 +12,7 @@ const categoriesArray = ['Movie', 'Adventure', 'Comedy', 'Family'];
 function Homescreen(): JSX.Element {
   const { data: popularMovies, isLoading, errorMessage } = useFetch<
     PopularMovie[]
-  >('api/movies/popular');
+  >('/api/movies/popular');
 
   if (errorMessage) {
     return <div>Error: {errorMessage}</div>;
@@ -40,7 +40,7 @@ function Homescreen(): JSX.Element {
       <h2 className={styles.watchlistTitle}>Watching</h2>
       <div className={styles.watchlist}>
         {others.map((other) => (
-          <MovieCard imgSrc={other.posterPath || ''} />
+          <MovieCard key={other.id} imgSrc={other.posterPath || ''} />
         ))}
       </div>
 
