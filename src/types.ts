@@ -1,3 +1,5 @@
+import { ObjectId } from 'bson';
+
 export type PopularMovie = {
   id: number;
   title: string;
@@ -20,4 +22,13 @@ export type Movie = {
     name: string;
     profilePath: string;
   }[];
+};
+
+export type User = {
+  _id?: ObjectId;
+  email: string;
+  firstName: string;
+  lastName: string;
+  password?: string;
+  imgSrc?: string;
 };

@@ -2,11 +2,17 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import express from 'express';
+import { connectMongoClient } from './server/db';
 import router from './server/routes';
+import { createUsersCollection } from './server/users';
+import cookieParser from 'cookie-parser';
 
 const { PORT } = process.env;
 
 const app = express();
+
+app.use(express.json());
+app.use(cookieParser());
 
 app.use('/api', router);
 
@@ -37,6 +43,12 @@ app.use(
   }
 );
 
-app.listen(PORT, () => {
-  console.log(`photoplay app listening at http://localhost:${PORT}`);
+connectMongoClient().then(async () => {
+  console.log('MongoDB connected');
+
+  await createUsersCollection();
+
+  app.listen(PORT, () => {
+    console.log(`photoplay app listening at http://localhost:${PORT}`);
+  });
 });
