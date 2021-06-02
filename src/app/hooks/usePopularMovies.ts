@@ -8,7 +8,7 @@ function usePopularMovies(): {
 } {
   const { data: popularMovies, isLoading, errorMessage } = useFetch<
     PopularMovie[]
-  >('api/movies/popular');
+  >('/api/movies/popular');
 
   return { popularMovies, isLoading, errorMessage };
 }
