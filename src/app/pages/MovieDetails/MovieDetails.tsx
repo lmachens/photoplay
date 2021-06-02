@@ -27,8 +27,6 @@ function MovieDetails(): JSX.Element {
   }
 
   const genresArray = movie.genres.map((genre) => genre.name);
-  const castName = movie.actors.map((actor) => actor.name);
-  const castImg = movie.actors.map((actor) => actor.profilePath);
 
   return (
     <div className={styles.container}>
