@@ -2,7 +2,7 @@ import { Movie } from '../../types';
 import useFetch from './useFetch';
 
 function useMovie(
-  id: number
+  id: string
 ): {
   movie: Movie | null;
   isLoading: boolean;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 
 import BackButton from '../../components/BackButton/BackButton';
@@ -8,39 +8,26 @@ import styles from './MovieDetails.module.css';
 import Rating from '../../components/Rating/Rating';
 import NavigationGenre from '../../components/NavigationGenre/NavigationGenre';
 import NavBar from '../../components/NavBar/NavBar';
+import useMovie from '../../hooks/useMovie';
 
 const categoriesArray = ['Movie', 'Adventure', 'Comedy', 'Family'];
 
-type Movie = {
-  id: number;
-  title: string;
-  tagline: string | null;
-  video: boolean;
-  posterPath: string;
-  genres: {
-    id: number;
-    name: string;
-  }[];
-  actors: {
-    id: number;
-    name: string;
-    profilePath: string;
-  }[];
-};
-
 function MovieDetails(): JSX.Element {
   const { id } = useParams<{ id: string }>();
-  const [movie, setMovie] = useState<Movie | null>();
+  const { movie, isLoading, errorMessage } = useMovie(id);
 
-  useEffect(() => {
-    fetch(`/api/movies/${id}`)
-      .then((response) => response.json())
-      .then(setMovie);
-  }, []);
+  if (errorMessage) {
+    return <div>Error</div>;
+  }
 
-  if (!movie) {
+  if (isLoading) {
     return <div>Loading...</div>;
   }
+
+  if (!movie) {
+    return <div>Movie not found</div>;
+  }
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
