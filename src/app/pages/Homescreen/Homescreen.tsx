@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import NavigationGenre from '../../components/NavigationGenre/NavigationGenre';
 import Rating from '../../components/Rating/Rating';
 import MovieCard from '../../components/MovieCard/MovieCard';
