@@ -20,7 +20,7 @@ const routes: CustomRouteProps[] = [
   { path: '/login', Component: Login },
   { path: '/register', Component: RegisterForm },
   { path: '/cast/:name', Component: Cast },
-  { path: '/show/:name', Component: TVShowDetails },
+  { path: '/show/:id', Component: TVShowDetails },
 ];
 
 function App(): JSX.Element {
