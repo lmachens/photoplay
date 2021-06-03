@@ -56,9 +56,11 @@ export async function createUsersCollection(): Promise<void> {
   console.log('Created users collection');
 }
 
-export async function insertUser(user: User): Promise<boolean> {
-  const result = await getUsersCollection().insertOne(user);
-  return result.insertedCount > 0;
+export async function insertUser(user: User): Promise<User> {
+  const result = await getUsersCollection().insertOne(user, {});
+  const insertedUser = result.ops[0];
+  delete insertedUser.password;
+  return insertedUser;
 }
 
 export async function deleteUser(user: Partial<User>): Promise<boolean> {
