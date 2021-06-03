@@ -30,7 +30,11 @@ function TVShowDetails(): JSX.Element {
     <div className={styles.container}>
       <header>
         <BackButton />
-        <Trailer headline="Narcos" videoSrc="" imageSrc={movie.posterPath} />
+        <Trailer
+          headline={movie.title}
+          videoSrc=""
+          imageSrc={movie.posterPath}
+        />
         <NavigationGenre categories={['Drama', 'Biographical', 'Crime Film']} />
       </header>
       <main>
