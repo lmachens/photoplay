@@ -41,11 +41,7 @@ function TVShowDetails(): JSX.Element {
       </header>
       <main>
         <Rating value={5} />
-        <p className={styles.movieDescription}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium,
-          dignissimos! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Laudantium, dignissimos!
-        </p>
+        <p className={styles.movieDescription}>{movie.tagline}</p>
         <div className={styles.button}>
           <Button>Watch Now</Button>
         </div>
