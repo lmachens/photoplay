@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './EpisodeCard.module.css';
-import DownloadIcon from '../Icons/DownloadIcon';
+import FavoriteIcon from '../Icons/FavoriteIcon';
 
 type InputProps = {
   headline: string;
@@ -19,8 +19,8 @@ function EpisodeCard({
       <h3 className={styles.episodeCard__headline}>{headline}</h3>
       <span className={styles.episodeCard__length}>{length} min</span>
       <button className={styles.episodeCard__button}>
-        <DownloadIcon className={styles.episodeCard__button_download} />
-        <div className={styles.episodeCard__button_text}>Download</div>
+        <FavoriteIcon className={styles.episodeCard__button_favorite} />
+        <div className={styles.episodeCard__button_text}>Add to Favorites</div>
       </button>
     </div>
   );
