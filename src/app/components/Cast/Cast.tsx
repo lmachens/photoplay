@@ -13,7 +13,11 @@ function Cast({ actors }: CastProps): JSX.Element {
   return (
     <div className={styles.artistCards}>
       {actors.map((actor) => (
-        <ArtistCard imgSrc={actor.profilePath} artistName={actor.name} />
+        <ArtistCard
+          key={actor.name}
+          imgSrc={actor.profilePath}
+          artistName={actor.name}
+        />
       ))}
     </div>
   );
