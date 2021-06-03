@@ -1,3 +1,10 @@
 .container {
+  padding-bottom: 6em;
+}
+.main {
   display: grid;
+  gap: 2em;
+  justify-items: center;
+  padding-left: 4em;
+  padding-right: 4em;
 }
