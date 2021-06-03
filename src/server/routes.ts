@@ -78,7 +78,7 @@ router.delete('/users/:email', async (req, res, next) => {
       res.status(404).send('Deletion failed');
       return;
     }
-    res.status(200).send();
+    res.status(200).send(`User ${email} deleted`);
   } catch (error) {
     next(error);
   }
