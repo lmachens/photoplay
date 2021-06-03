@@ -26,20 +26,22 @@ function TVShowDetails(): JSX.Element {
     return <div>Movie not found</div>;
   }
 
+  const genresArray = movie.genres.map((genre) => genre.name);
+
   return (
     <div className={styles.container}>
       <header>
         <BackButton />
-        <Trailer headline="Narcos" videoSrc="" imageSrc={movie.posterPath} />
-        <NavigationGenre categories={['Drama', 'Biographical', 'Crime Film']} />
+        <Trailer
+          headline={movie.title}
+          videoSrc=""
+          imageSrc={movie.posterPath}
+        />
+        <NavigationGenre categories={genresArray} />
       </header>
       <main>
         <Rating value={5} />
-        <p className={styles.movieDescription}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium,
-          dignissimos! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Laudantium, dignissimos!
-        </p>
+        <p className={styles.movieDescription}>{movie.tagline}</p>
         <div className={styles.button}>
           <Button>Add to favorites</Button>
         </div>
