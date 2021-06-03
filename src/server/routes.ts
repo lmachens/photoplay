@@ -59,12 +59,12 @@ router.post('/users/login', async (req, res, next) => {
 router.post('/users', async (req, res, next) => {
   try {
     const user = req.body;
-    const inserted = await insertUser(user);
-    if (!inserted) {
+    const insertedUser = await insertUser(user);
+    if (!insertedUser) {
       res.status(409).send('Registration failed');
       return;
     }
-    res.status(200).send();
+    res.status(201).json(insertedUser);
   } catch (error) {
     next(error);
   }
@@ -78,7 +78,7 @@ router.delete('/users/:email', async (req, res, next) => {
       res.status(404).send('Deletion failed');
       return;
     }
-    res.status(200).send();
+    res.status(200).send(`User ${email} deleted`);
   } catch (error) {
     next(error);
   }
