@@ -25,7 +25,13 @@ function Homescreen(): JSX.Element {
 
   return (
     <main className={styles.container}>
-      <img className={styles.poster} src={popularMovies[0].posterPath || ''} />
+      <img
+        className={styles.poster}
+        src={
+          popularMovies[0].posterPath ||
+          'https://memegenerator.net/img/instances/62578430.jpg'
+        }
+      />
       <Rating value={4}></Rating>
       <div className={styles.navigationGenre}>
         <NavigationGenre categories={categoriesArray}></NavigationGenre>
@@ -35,7 +41,10 @@ function Homescreen(): JSX.Element {
         {popularMovies.map((popularMovie) => (
           <MovieCard
             key={popularMovie.id}
-            imgSrc={popularMovie.posterPath || ''}
+            imgSrc={
+              popularMovie.posterPath ||
+              'https://memegenerator.net/img/instances/62578430.jpg'
+            }
           />
         ))}
       </div>
