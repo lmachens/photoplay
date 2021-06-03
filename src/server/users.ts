@@ -67,5 +67,7 @@ export async function deleteUser(user: Partial<User>): Promise<boolean> {
 }
 
 export async function findUser(user: Partial<User>): Promise<User | null> {
-  return await getUsersCollection().findOne(user);
+  return await getUsersCollection().findOne(user, {
+    projection: { password: 0 },
+  });
 }
