@@ -40,7 +40,9 @@ function TVShowDetails(): JSX.Element {
           dignissimos! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           Laudantium, dignissimos!
         </p>
-        <Button>Watch Now</Button>
+        <div className={styles.button}>
+          <Button>Watch Now</Button>
+        </div>
         <p className={styles.episodesHeadline}>Episodes</p>
         <EpisodeCard headline="Headline" runtime={120} imgSrc="/matrix.jpg" />
         <EpisodeCard headline="Headline" runtime={120} imgSrc="/matrix.jpg" />
