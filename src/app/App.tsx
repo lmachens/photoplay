@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, RouteProps } from 'react-router-dom';
-import RegisterForm from './Page/Register';
+import RegisterForm from './pages/Register/Register';
 import Cast from './pages/Cast/Cast';
 import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
 import Homescreen from './pages/Homescreen/Homescreen';
