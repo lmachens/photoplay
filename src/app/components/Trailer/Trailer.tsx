@@ -4,12 +4,13 @@ import styles from './Trailer.module.css';
 type TrailerProps = {
   headline: string;
   videoSrc: string;
+  imageSrc: string;
 };
 
-function Trailer({ headline, videoSrc }: TrailerProps): JSX.Element {
+function Trailer({ headline, videoSrc, imageSrc }: TrailerProps): JSX.Element {
   return (
     <>
-      <video className={styles.video} controls poster="narcos.png">
+      <video className={styles.video} controls poster={imageSrc}>
         <source src={videoSrc} type="video/mp4" />
         <source src={videoSrc} type="video/webm" />
       </video>

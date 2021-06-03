@@ -34,14 +34,19 @@ function MovieDetails(): JSX.Element {
         <BackButton></BackButton>
       </header>
       <main className={styles.main}>
-        <div className={styles.MovieTrailer}>
+        <div className={styles.movieVignette}>
           <img className={styles.movieImage} src={movie.posterPath} />
-          <p>{movie.title}</p>
+        </div>
+        <div className={styles.movieTitleGenre}>
+          <p className={styles.movieTitle}>{movie.title}</p>
           <NavigationGenre categories={genresArray} />
         </div>
+
         <Rating value={4} />
         <p className={styles.movieDescription}>{movie.tagline}</p>
-        <Button>Watch now</Button>
+        <div className={styles.movieButton}>
+          <Button>Watch now</Button>
+        </div>
         <div>
           <p className={styles.artistCardTitle}>Cast</p>
           <Cast actors={movie.actors} />

@@ -1,5 +1,6 @@
 .container {
   text-align: center;
+  width: 100%;
 }
 
 .episodesHeadline {
@@ -15,9 +16,7 @@
   padding-left: 1rem;
 }
 
-.navBar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1em;
+.button {
+  margin: 0 auto;
+  max-width: 15em;
 }

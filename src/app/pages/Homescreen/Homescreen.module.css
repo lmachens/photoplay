@@ -2,12 +2,11 @@
   background: var(--background-color);
   display: grid;
   gap: 1em;
-  height: 100vh;
 }
 
 .poster {
   width: 100%;
-  height: 55vh;
+  height: auto;
 }
 
 .watchlistTitle {
@@ -29,14 +28,4 @@
 
 .watchlist::-webkit-scrollbar {
   display: none;
-}
-
-.navBar {
-  display: flex;
-  justify-content: space-around;
-  padding: 1em 2em;
-  background-color: var(--navbar-background-color);
-  width: 100%;
-  position: fixed;
-  bottom: 0;
 }

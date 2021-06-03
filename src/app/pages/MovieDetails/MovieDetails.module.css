@@ -1,11 +1,10 @@
 .container {
-  display: grid;
   height: 100vh;
-  padding: 1em;
-  grid-gap: 1em;
 }
 .main {
   overflow: scroll;
+  padding-bottom: 4em;
+  display: grid;
 }
 
 .main::-webkit-scrollbar {
@@ -14,18 +13,54 @@
 
 .movieImage {
   width: 100%;
+  z-index: -1;
+  position: relative;
+}
+
+.movieVignette {
+  box-shadow: inset 0 -5em 7em black, inset 0 5em 7em black;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.movieTitleGenre {
+  padding: 0 2em;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-self: end;
+  z-index: 10;
 }
 
 .movieDescription {
   font-weight: 100;
+  padding: 0 2em;
 }
 
 .artistCardTitle {
   font-weight: 600;
+  padding: 0 2em;
 }
 
-.navBar {
+.artistCards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: bottom;
+  column-gap: 1em;
+  width: 100%;
+  grid-auto-flow: column;
+  overflow: scroll;
+  padding: 0 2em;
+}
+
+.artistCards::-webkit-scrollbar {
+  display: none;
+}
+
+.movieTitle {
+  font-size: clamp(1.7rem, 2.5vw, 2.5rem);
+  margin: 0;
+}
+
+.movieButton {
+  width: 40%;
+  justify-self: center;
+
 }
