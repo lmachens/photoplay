@@ -1,12 +1,15 @@
 import React from 'react';
 
-export default function FavoriteIcon(): JSX.Element {
+export default function FavoriteIcon(
+  props: React.SVGProps<SVGSVGElement>
+): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="2 0 25 25"
       width="20"
       height="20"
+      {...props}
     >
       <polygon
         fill="currentColor"
