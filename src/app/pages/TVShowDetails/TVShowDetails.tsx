@@ -41,7 +41,7 @@ function TVShowDetails(): JSX.Element {
           Laudantium, dignissimos!
         </p>
         <div className={styles.button}>
-          <Button>Watch Now</Button>
+          <Button>Add to favorites</Button>
         </div>
         <p className={styles.episodesHeadline}>Episodes</p>
         <EpisodeCard headline="Headline" runtime={120} imgSrc="/matrix.jpg" />

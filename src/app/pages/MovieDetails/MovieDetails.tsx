@@ -45,7 +45,7 @@ function MovieDetails(): JSX.Element {
         <Rating value={4} />
         <p className={styles.movieDescription}>{movie.tagline}</p>
         <div className={styles.movieButton}>
-          <Button>Watch now</Button>
+          <Button>Add to favorites</Button>
         </div>
         <div>
           <p className={styles.artistCardTitle}>Cast</p>
