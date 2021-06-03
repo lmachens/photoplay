@@ -8,6 +8,7 @@ import Rating from '../../components/Rating/Rating';
 import NavigationGenre from '../../components/NavigationGenre/NavigationGenre';
 import useMovie from '../../hooks/useMovie';
 import Cast from '../../components/Cast/Cast';
+import NavBar from '../../components/NavBar/NavBar';
 
 function MovieDetails(): JSX.Element {
   const { id } = useParams<{ id: string }>();
@@ -51,7 +52,9 @@ function MovieDetails(): JSX.Element {
           <Cast actors={movie.actors} />
         </div>
       </main>
-      <footer className={styles.footer}>{/* <NavBar /> */}</footer>
+      <footer className={styles.footer}>
+        <NavBar />
+      </footer>
     </div>
   );
 }
