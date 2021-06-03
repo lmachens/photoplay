@@ -26,6 +26,8 @@ function TVShowDetails(): JSX.Element {
     return <div>Movie not found</div>;
   }
 
+  const genresArray = movie.genres.map((genre) => genre.name);
+
   return (
     <div className={styles.container}>
       <header>
@@ -35,7 +37,7 @@ function TVShowDetails(): JSX.Element {
           videoSrc=""
           imageSrc={movie.posterPath}
         />
-        <NavigationGenre categories={['Drama', 'Biographical', 'Crime Film']} />
+        <NavigationGenre categories={genresArray} />
       </header>
       <main>
         <Rating value={5} />
