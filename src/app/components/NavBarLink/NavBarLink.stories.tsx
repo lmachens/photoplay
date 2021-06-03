@@ -2,7 +2,7 @@ import React from 'react';
 import NavBarLink from './NavBarLink';
 import HomeIcon from '../Icons/HomeIcon';
 import SearchIcon from '../Icons/SearchIcon';
-import DownloadIcon from '../Icons/DownloadIcon';
+import FavoriteIcon from '../Icons/FavoriteIcon';
 import ProfileIcon from '../Icons/ProfileIcon';
 
 export default {
@@ -17,7 +17,7 @@ export const Search = (): JSX.Element => (
   <NavBarLink icon={<SearchIcon />} text="Search" link="#" />
 );
 export const Download = (): JSX.Element => (
-  <NavBarLink icon={<DownloadIcon />} text="Download" link="#" />
+  <NavBarLink icon={<FavoriteIcon />} text="Favorite" link="#" />
 );
 export const Profile = (): JSX.Element => (
   <NavBarLink icon={<ProfileIcon />} text="Profile" link="#" />
