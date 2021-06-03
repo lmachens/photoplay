@@ -45,9 +45,10 @@
 
 .episodeCard__button_text {
   font-weight: 300;
+  text-align: left;
 }
 
-.episodeCard__button_download {
+.episodeCard__button_favorite {
   width: auto;
   height: 50%;
 }

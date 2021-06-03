@@ -1,5 +1,5 @@
 import React from 'react';
-import Cast from './Cast';
+import Cast from './CastComponent';
 
 export default {
   title: 'Component/Cast',

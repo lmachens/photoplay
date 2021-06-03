@@ -6,9 +6,9 @@ import Button from '../../components/Button/Button';
 import styles from './MovieDetails.module.css';
 import Rating from '../../components/Rating/Rating';
 import NavigationGenre from '../../components/NavigationGenre/NavigationGenre';
-import NavBar from '../../components/NavBar/NavBar';
 import useMovie from '../../hooks/useMovie';
-import Cast from '../../components/Cast/Cast';
+import Cast from '../../components/Cast/CastComponent';
+import NavBar from '../../components/NavBar/NavBar';
 
 function MovieDetails(): JSX.Element {
   const { id } = useParams<{ id: string }>();
@@ -49,7 +49,9 @@ function MovieDetails(): JSX.Element {
         </div>
         <div>
           <p className={styles.artistCardTitle}>Cast</p>
-          <Cast actors={movie.actors} />
+          <div className={styles.artistCardSlider}>
+            <Cast actors={movie.actors} />
+          </div>
         </div>
       </main>
       <footer className={styles.footer}>
