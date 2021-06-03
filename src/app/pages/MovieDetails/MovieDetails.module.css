@@ -54,12 +54,6 @@
   display: none;
 }
 
-.navBar {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: bottom;
-}
-
 .movieTitle {
   font-size: clamp(1.7rem, 2.5vw, 2.5rem);
   margin: 0;
