@@ -9,3 +9,30 @@ GET {{baseUrl}}/api/movies/503736
 
 ### Not found
 GET {{baseUrl}}/api/movies/philipps_adventure
+
+### Register user (will only work once, because the `email` has to be unique)
+POST {{baseUrl}}/api/users
+Content-Type: application/json
+
+{
+  "email": "bob@bobson.com",
+  "firstName": "Bob",
+  "lastName": "Bobson",
+  "password": "myPlaintextPassword"
+}
+
+### Delete a user
+DELETE {{baseUrl}}/api/users/bob@bobson.com
+
+### Login user (make sure this user exists and check the response headers "Set-Cookie")
+POST {{baseUrl}}/api/users/login
+Content-Type: application/json
+
+{
+  "email": "bob@bobson.com",
+  "password": "myPlaintextPassword"
+}
+
+### Logged in user (make sure to login first)
+GET {{baseUrl}}/api/users/me
+

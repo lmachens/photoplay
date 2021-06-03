@@ -7,5 +7,5 @@ export default {
 };
 
 export const TrailerView = (): JSX.Element => (
-  <Trailer headline="Narcos" videoSrc="" />
+  <Trailer headline="Narcos" videoSrc="" imageSrc="" />
 );

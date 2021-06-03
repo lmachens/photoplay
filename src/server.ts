@@ -2,11 +2,19 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import express from 'express';
+import { connectMongoClient } from './server/db';
 import router from './server/routes';
+import { createUsersCollection } from './server/users';
+import cookieParser from 'cookie-parser';
 
 const { PORT } = process.env;
 
 const app = express();
+
+// Middleware that parses json and looks at requests where the Content-Type header matches the type option.
+app.use(express.json());
+// Middleware that parses Cookie header and populate req.cookies with an object keyed by the cookie names.
+app.use(cookieParser());
 
 app.use('/api', router);
 
@@ -37,6 +45,12 @@ app.use(
   }
 );
 
-app.listen(PORT, () => {
-  console.log(`photoplay app listening at http://localhost:${PORT}`);
+connectMongoClient().then(async () => {
+  console.log('MongoDB connected');
+
+  await createUsersCollection();
+
+  app.listen(PORT, () => {
+    console.log(`photoplay app listening at http://localhost:${PORT}`);
+  });
 });

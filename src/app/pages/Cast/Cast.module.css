@@ -3,14 +3,11 @@
   height: 100vh;
   padding: 1em;
   grid-gap: 1em;
+  padding-bottom: 5em;
 }
 
 .main {
   overflow: scroll;
-}
-
-.main::-webkit-scrollbar {
-  display: none;
 }
 
 .castPortrait {
@@ -32,4 +29,9 @@
   width: 100%;
   grid-auto-flow: column;
   overflow: scroll;
+}
+
+.main::-webkit-scrollbar,
+.movieCards::-webkit-scrollbar {
+  display: none;
 }

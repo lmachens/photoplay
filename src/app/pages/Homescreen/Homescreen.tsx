@@ -32,10 +32,12 @@ function Homescreen(): JSX.Element {
       </div>
       <h2 className={styles.watchlistTitle}>Watching</h2>
       <div className={styles.watchlist}>
-        <MovieCard imgSrc="/narcos.png"></MovieCard>
-        <MovieCard imgSrc="/deadpool.png"></MovieCard>
-        <MovieCard imgSrc="/annabelle.png"></MovieCard>
-        <MovieCard imgSrc="/toystory.png"></MovieCard>
+        {popularMovies.map((popularMovie) => (
+          <MovieCard
+            key={popularMovie.id}
+            imgSrc={popularMovie.posterPath || ''}
+          />
+        ))}
       </div>
       <NavBar />
     </main>
