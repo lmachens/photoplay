@@ -41,15 +41,6 @@
   padding: 0 2em;
 }
 
-.artistCards {
-  display: grid;
-  column-gap: 1em;
-  width: 100%;
-  grid-auto-flow: column;
-  overflow: scroll;
-  padding: 0 2em;
-}
-
 .artistCards::-webkit-scrollbar {
   display: none;
 }
@@ -62,5 +53,4 @@
 .movieButton {
   width: 40%;
   justify-self: center;
-
 }
