@@ -7,8 +7,7 @@ import styles from './MovieDetails.module.css';
 import Rating from '../../components/Rating/Rating';
 import NavigationGenre from '../../components/NavigationGenre/NavigationGenre';
 import useMovie from '../../hooks/useMovie';
-import Cast from '../../components/Cast/Cast';
-import NavBar from '../../components/NavBar/NavBar';
+import Cast from '../../components/Cast/CastComponent';
 
 function MovieDetails(): JSX.Element {
   const { id } = useParams<{ id: string }>();
