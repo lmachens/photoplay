@@ -5,3 +5,7 @@
   grid-auto-flow: column;
   overflow: scroll;
 }
+
+.artistCards::-webkit-scrollbar {
+  display: none;
+}

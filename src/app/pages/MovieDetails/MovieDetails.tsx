@@ -49,7 +49,9 @@ function MovieDetails(): JSX.Element {
         </div>
         <div>
           <p className={styles.artistCardTitle}>Cast</p>
-          <Cast actors={movie.actors} />
+          <div className={styles.artistCardSlider}>
+            <Cast actors={movie.actors} />
+          </div>
         </div>
       </main>
       <footer className={styles.footer}>
