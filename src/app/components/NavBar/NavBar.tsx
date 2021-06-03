@@ -1,5 +1,5 @@
 import React from 'react';
-import DownloadIcon from '../Icons/DownloadIcon';
+import FavoriteIcon from '../Icons/FavoriteIcon';
 import HomeIcon from '../Icons/HomeIcon';
 import ProfileIcon from '../Icons/ProfileIcon';
 import SearchIcon from '../Icons/SearchIcon';
@@ -11,7 +11,7 @@ function NavBar(): JSX.Element {
     <div className={styles.navBar}>
       <NavBarLink icon={<HomeIcon />} text="Home" link="/" />
       <NavBarLink icon={<SearchIcon />} text="Search" link="#" />
-      <NavBarLink icon={<DownloadIcon />} text="Download" link="#" />
+      <NavBarLink icon={<FavoriteIcon />} text="Favorite" link="#" />
       <NavBarLink icon={<ProfileIcon />} text="Profile" link="#" />
     </div>
   );
