@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import LabeledInput from '../../components/LabeledInput/LabeledInput';
 import styles from './Register.module.css';
 import Button from '../../components/Button/Button';
@@ -6,15 +7,24 @@ import BackButton from '../../components/BackButton/BackButton';
 import ProfilePictureIcon from '../../components/Icons/ProfilePictureIcon';
 
 function RegisterForm(): JSX.Element {
+  const history = useHistory();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    alert(`${firstName} submitted`);
+    const user = { email, firstName, lastName, password };
+    await fetch('/api/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    });
+    history.push('/');
   }
 
   return (
