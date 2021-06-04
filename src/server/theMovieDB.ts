@@ -17,7 +17,7 @@ type ErrorResult = {
 async function fetchTheMovieDB<T>(path: string, query = ''): Promise<T> {
   let url = `${BASE_URL}${path}?`;
   if (query) {
-    url += `${query}&`;
+    url += `query=${query}&`;
   }
   url += `api_key=${THE_MOVIE_DB_KEY}`;
 
@@ -174,4 +174,42 @@ export async function getMovieById(id: string): Promise<Movie> {
     })),
   };
   return movie;
+}
+
+type TVShowResult = {
+  poster_path: string | null;
+  popularity: number;
+  id: number;
+  overview: string;
+  backdrop_path: string | null;
+  vote_average: number;
+  media_type: string;
+  first_air_date: string;
+  origin_country: string[];
+  genre_ids: number[];
+  original_language: string;
+  vote_count: number;
+  name: string;
+  original_name: string;
+};
+
+type ActorResult = {
+  profile_path: string | null;
+  adult: boolean;
+  id: number;
+  media_type: string;
+  name: string;
+  popularity: number;
+  known_for: MovieResult | TVShowResult;
+};
+
+type MultiSearchResult = {
+  page: number;
+  results: (MovieResult | TVShowResult | ActorResult)[];
+};
+
+export async function getMultiSearch(
+  query: string
+): Promise<MultiSearchResult> {
+  return await fetchTheMovieDB<MultiSearchResult>('/search/multi', query);
 }

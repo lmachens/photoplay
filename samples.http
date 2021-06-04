@@ -36,3 +36,5 @@ Content-Type: application/json
 ### Logged in user (make sure to login first)
 GET {{baseUrl}}/api/users/me
 
+###
+GET {{baseUrl}}/api/search?query=Cars
