@@ -18,9 +18,8 @@ app.use(cookieParser());
 
 app.use('/api', router);
 
-app.get('/', (_req, res) => {
-  res.send('Hello World!');
-});
+// Serve app production bundle
+app.use(express.static('dist/app'));
 
 /**
  * Error handling for all routes.
