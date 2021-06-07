@@ -43,7 +43,7 @@ function TVShowDetails(): JSX.Element {
         <Rating value={5} />
         <p className={styles.movieDescription}>{movie.tagline}</p>
         <div className={styles.button}>
-          <Button>Watch Now</Button>
+          <Button>Add to favorites</Button>
         </div>
         <p className={styles.episodesHeadline}>Episodes</p>
         <EpisodeCard headline="Headline" runtime={120} imgSrc="/matrix.jpg" />
