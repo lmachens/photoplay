@@ -1,3 +1,11 @@
+---
+name: Pull-Request Template
+about: A default Pull-Request story
+title: '(Short name)'
+labels: ''
+assignees: ''
+---
+
 ## What is the current behavior?
 
 Issue Number: N/A

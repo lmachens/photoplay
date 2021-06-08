@@ -1,3 +1,11 @@
+---
+name: Issue Template
+about: A default issue story
+title: '(Short name)'
+labels: ''
+assignees: ''
+---
+
 #### Description
 
 A clear and concise description of what the issue is about.
