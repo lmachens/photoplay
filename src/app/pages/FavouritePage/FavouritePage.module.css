@@ -1,0 +1,9 @@
+.container {
+  padding-bottom: 6em;
+}
+.main {
+  display: grid;
+  gap: 2em;
+  justify-items: center;
+  padding: 0 4em;
+}
