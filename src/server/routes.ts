@@ -32,16 +32,20 @@ router.get('/shows/:id', (_req, res) => {
   res.status(404).send();
 });
 
-router.get('/search', async (req, res) => {
-  const { query } = req.query;
+router.get('/search', async (req, res, next) => {
+  try {
+    const { query } = req.query;
+    if (typeof query !== 'string') {
+      res.status(400).send('Query is malformed');
+      return;
+    }
 
-  if (typeof query !== 'string') {
-    return res.status(400).send('Query is malformed');
+    const searchResult = await getMultiSearch(query);
+
+    res.status(200).json(searchResult);
+  } catch (error) {
+    next(error);
   }
-
-  const searchResult = await getMultiSearch(query);
-
-  return res.status(200).json(searchResult);
 });
 
 router.post('/users/login', async (req, res, next) => {
