@@ -5,6 +5,7 @@ import styles from './Register.module.css';
 import Button from '../../components/Button/Button';
 import BackButton from '../../components/BackButton/BackButton';
 import ProfilePictureIcon from '../../components/Icons/ProfilePictureIcon';
+import { User } from '../../../types';
 
 function RegisterForm(): JSX.Element {
   const history = useHistory();
@@ -16,7 +17,7 @@ function RegisterForm(): JSX.Element {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const user = { email, firstName, lastName, password };
+    const user: User = { email, firstName, lastName, password };
     await fetch('/api/users', {
       method: 'POST',
       headers: {
