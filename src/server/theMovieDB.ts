@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { Movie, PopularMovie } from '../types';
+import { Movie, MultiSearch, PopularMovie } from '../types';
 
 const { THE_MOVIE_DB_KEY } = process.env;
 
@@ -17,7 +17,7 @@ type ErrorResult = {
 async function fetchTheMovieDB<T>(path: string, query = ''): Promise<T> {
   let url = `${BASE_URL}${path}?`;
   if (query) {
-    url += `${query}&`;
+    url += `query=${query}&`;
   }
   url += `api_key=${THE_MOVIE_DB_KEY}`;
 
@@ -174,4 +174,97 @@ export async function getMovieById(id: string): Promise<Movie> {
     })),
   };
   return movie;
+}
+
+type SearchMovieResult = {
+  poster_path: string | null;
+  adult: boolean;
+  overview: string;
+  release_date: string;
+  original_title: string;
+  genre_ids: number[];
+  id: number;
+  media_type: 'movie';
+  original_language: string;
+  title: string;
+  backdrop_path: string | null;
+  popularity: number;
+  vote_count: number;
+  video: boolean;
+  vote_average: number;
+};
+
+type SearchTVShowResult = {
+  poster_path: string | null;
+  popularity: number;
+  id: number;
+  overview: string;
+  backdrop_path: string | null;
+  vote_average: number;
+  media_type: 'tv';
+  first_air_date: string;
+  origin_country: string;
+  genre_ids: number[];
+  original_language: string;
+  vote_count: number;
+  name: string;
+  original_name: string;
+};
+
+type SearchActorResult = {
+  profile_path: string | null;
+  adult: boolean;
+  id: number;
+  media_type: 'person';
+  known_for: SearchMovieResult | SearchTVShowResult;
+  name: string;
+  popularity: number;
+};
+
+type MultiSearchResult = {
+  page: number;
+  results: (SearchMovieResult | SearchTVShowResult | SearchActorResult)[];
+  total_results: number;
+  total_pages: number;
+};
+
+/**
+ * Search multiple models in a single request. Multi search currently supports searching for movies, tv shows and people in a single request.
+ * https://developers.themoviedb.org/3/search/multi-search
+ */
+export async function getMultiSearch(query: string): Promise<MultiSearch> {
+  const searchResults = await fetchTheMovieDB<MultiSearchResult>(
+    '/search/multi',
+    query
+  );
+
+  const movies = searchResults.results.filter(
+    (item) => item.media_type === 'movie'
+  ) as SearchMovieResult[];
+  const tvShows = searchResults.results.filter(
+    (item) => item.media_type === 'tv'
+  ) as SearchTVShowResult[];
+  const actors = searchResults.results.filter(
+    (item) => item.media_type === 'person'
+  ) as SearchActorResult[];
+
+  const multiSearch: MultiSearch = {
+    movies: movies.map((movie) => ({
+      id: movie.id,
+      title: movie.title,
+      posterPath: movie.poster_path,
+    })),
+    tvShows: tvShows.map((tvShow) => ({
+      id: tvShow.id,
+      name: tvShow.name,
+      posterPath: tvShow.poster_path,
+    })),
+    actors: actors.map((actor) => ({
+      id: actor.id,
+      name: actor.name,
+      profilePath: actor.profile_path,
+    })),
+  };
+
+  return multiSearch;
 }
