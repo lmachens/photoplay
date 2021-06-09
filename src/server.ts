@@ -6,6 +6,7 @@ import { connectMongoClient } from './server/db';
 import router from './server/routes';
 import { createUsersCollection } from './server/users';
 import cookieParser from 'cookie-parser';
+import path from 'path';
 
 const { PORT } = process.env;
 
@@ -23,6 +24,11 @@ app.use('/storybook', express.static('dist/storybook'));
 
 // Serve app production bundle
 app.use(express.static('dist/app'));
+
+// Handle client routing, return all requests to the app
+app.get('*', (_req, res) => {
+  res.sendFile(path.join(__dirname, 'app/index.html'));
+});
 
 /**
  * Error handling for all routes.
