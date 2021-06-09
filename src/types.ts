@@ -32,3 +32,21 @@ export type User = {
   password?: string;
   imgSrc?: string;
 };
+
+export type MultiSearch = {
+  movies: {
+    id: number;
+    title: string;
+    posterPath: string | null;
+  }[];
+  tvShows: {
+    id: number;
+    name: string;
+    posterPath: string | null;
+  }[];
+  actors: {
+    id: number;
+    name: string;
+    profilePath: string | null;
+  }[];
+};

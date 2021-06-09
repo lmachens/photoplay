@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { Movie, PopularMovie } from '../types';
+import { Movie, MultiSearch, PopularMovie } from '../types';
 
 const { THE_MOVIE_DB_KEY } = process.env;
 
@@ -232,8 +232,39 @@ type MultiSearchResult = {
  * Search multiple models in a single request. Multi search currently supports searching for movies, tv shows and people in a single request.
  * https://developers.themoviedb.org/3/search/multi-search
  */
-export async function getMultiSearch(
-  query: string
-): Promise<MultiSearchResult> {
-  return await fetchTheMovieDB<MultiSearchResult>('/search/multi', query);
+export async function getMultiSearch(query: string): Promise<MultiSearch> {
+  const searchResults = await fetchTheMovieDB<MultiSearchResult>(
+    '/search/multi',
+    query
+  );
+
+  const movies = searchResults.results.filter(
+    (item) => item.media_type === 'movie'
+  ) as SearchMovieResult[];
+  const tvShows = searchResults.results.filter(
+    (item) => item.media_type === 'tv'
+  ) as SearchTVShowResult[];
+  const actors = searchResults.results.filter(
+    (item) => item.media_type === 'person'
+  ) as SearchActorResult[];
+
+  const multiSearch: MultiSearch = {
+    movies: movies.map((movie) => ({
+      id: movie.id,
+      title: movie.title,
+      posterPath: movie.poster_path,
+    })),
+    tvShows: tvShows.map((tvShow) => ({
+      id: tvShow.id,
+      name: tvShow.name,
+      posterPath: tvShow.poster_path,
+    })),
+    actors: actors.map((actor) => ({
+      id: actor.id,
+      name: actor.name,
+      profilePath: actor.profile_path,
+    })),
+  };
+
+  return multiSearch;
 }
