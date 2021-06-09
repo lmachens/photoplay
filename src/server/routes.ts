@@ -1,5 +1,5 @@
 import express from 'express';
-import { getMovieById, getPopularMovies } from './theMovieDB';
+import { getMovieById, getMultiSearch, getPopularMovies } from './theMovieDB';
 import { findUser, insertUser, deleteUser } from './users';
 import { ObjectId } from 'mongodb';
 
@@ -32,8 +32,20 @@ router.get('/shows/:id', (_req, res) => {
   res.status(404).send();
 });
 
-router.get('/search', (_req, res) => {
-  res.status(404).send();
+router.get('/search', async (req, res, next) => {
+  try {
+    const { query } = req.query;
+    if (typeof query !== 'string') {
+      res.status(400).send('Query is malformed');
+      return;
+    }
+
+    const searchResult = await getMultiSearch(query);
+
+    res.status(200).json(searchResult);
+  } catch (error) {
+    next(error);
+  }
 });
 
 router.post('/users/login', async (req, res, next) => {
