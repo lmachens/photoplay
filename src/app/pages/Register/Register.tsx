@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import LabeledInput from '../../components/LabeledInput/LabeledInput';
 import styles from './Register.module.css';
@@ -16,16 +16,14 @@ function RegisterForm(): JSX.Element {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const { data: user, mutate, isLoading, errorMessage } = useMutation(postUser);
+  const { mutate, isLoading, errorMessage } = useMutation(postUser, {
+    onSuccess: () => {
+      history.push('/');
+    },
+  });
   const [validationErrorMessage, setValidationErrorMessage] = useState<
     string | null
   >(null);
-
-  useEffect(() => {
-    if (user) {
-      history.push('/');
-    }
-  }, [user]);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
