@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import LabeledInput from '../../components/LabeledInput/LabeledInput';
 import styles from './Register.module.css';
@@ -6,6 +6,8 @@ import Button from '../../components/Button/Button';
 import BackButton from '../../components/BackButton/BackButton';
 import ProfilePictureIcon from '../../components/Icons/ProfilePictureIcon';
 import { User } from '../../../types';
+import useMutation from '../../hooks/useMutation';
+import { postUser } from '../../utils/api';
 
 function RegisterForm(): JSX.Element {
   const history = useHistory();
@@ -14,18 +16,28 @@ function RegisterForm(): JSX.Element {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const { data: user, mutate, isLoading, errorMessage } = useMutation(postUser);
+  const [validationErrorMessage, setValidationErrorMessage] = useState<
+    string | null
+  >(null);
+
+  useEffect(() => {
+    if (user) {
+      history.push('/');
+    }
+  }, [user]);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    setValidationErrorMessage(null);
+    if (password !== confirmPassword) {
+      setValidationErrorMessage('Passwords did not match');
+      return;
+    }
+
     const user: User = { email, firstName, lastName, password };
-    await fetch('/api/users', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(user),
-    });
-    history.push('/');
+    mutate(user);
   }
 
   return (
@@ -83,7 +95,12 @@ function RegisterForm(): JSX.Element {
             required
           />
 
-          <Button>Register</Button>
+          <Button disabled={isLoading}>Register</Button>
+          {(errorMessage || validationErrorMessage) && (
+            <div className={styles.registerForm__error}>
+              Error: {errorMessage || validationErrorMessage}
+            </div>
+          )}
         </form>
       </main>
     </div>
