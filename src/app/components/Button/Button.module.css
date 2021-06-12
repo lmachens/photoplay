@@ -11,3 +11,7 @@
   font-family: var(--font-family);
   height: 3.2em;
 }
+
+.button:disabled {
+  background: var(--hint-color);
+}
