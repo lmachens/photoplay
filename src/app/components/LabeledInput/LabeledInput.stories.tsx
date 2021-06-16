@@ -1,24 +1,27 @@
 import React from 'react';
-import LabeledInput from './LabeledInput';
+import LabeledInput, { LabeledInputProps } from './LabeledInput';
+import { Story } from '@storybook/react';
 
 export default {
   title: 'Component/LabeledInput',
   component: LabeledInput,
 };
 
-export const email = (): JSX.Element => (
-  <LabeledInput
-    label="Email"
-    placeholder="Email"
-    value=""
-    onChange={console.log}
-  />
-);
-export const password = (): JSX.Element => (
-  <LabeledInput
-    label="Password"
-    placeholder="Password"
-    value=""
-    onChange={console.log}
-  />
-);
+const Template: Story<LabeledInputProps> = (args) => <LabeledInput {...args} />;
+
+export const Email = Template.bind({});
+
+Email.args = {
+  label: 'Email',
+  placeholder: 'Email',
+  value: '',
+};
+
+export const Password = Template.bind({});
+
+Password.args = {
+  label: 'Password',
+  placeholder: 'Password',
+  value: '',
+  type: 'password',
+};
