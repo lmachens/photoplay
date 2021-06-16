@@ -7,7 +7,7 @@ import Homescreen from './pages/Homescreen/Homescreen';
 import Login from './pages/Login/Login';
 import MovieDetails from './pages/MovieDetails/MovieDetails';
 import TVShowDetails from './pages/TVShowDetails/TVShowDetails';
-import styles from './App.module.css';
+import MobileLayout from './components/MobileLayout/MobileLayout';
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -26,7 +26,7 @@ const routes: CustomRouteProps[] = [
 
 function App(): JSX.Element {
   return (
-    <div className={styles.container}>
+    <MobileLayout>
       <BrowserRouter>
         <Switch>
           {routes.map(({ Component, ...routeProps }) => (
@@ -36,7 +36,7 @@ function App(): JSX.Element {
           ))}
         </Switch>
       </BrowserRouter>
-    </div>
+    </MobileLayout>
   );
 }
 
