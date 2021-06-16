@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './LabeledInput.module.css';
 
-type LabeledInputProps = {
+export type LabeledInputProps = {
   label: string;
   placeholder: string;
   value: string;
