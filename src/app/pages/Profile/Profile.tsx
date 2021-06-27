@@ -8,13 +8,30 @@ import SettingsIcon from '../../components/Icons/SettingsIcon';
 import HelpIcon from '../../components/Icons/HelpIcon';
 import LogoutIcon from '../../components/Icons/LogoutIcon';
 import NavBar from '../../components/NavBar/NavBar';
+import useFetch from '../../hooks/useFetch';
+import { User } from '../../../types';
+import { Redirect } from 'react-router-dom';
 
 function Profile(): JSX.Element {
+  const { data: user, isLoading, errorMessage } = useFetch<User>(
+    '/api/users/me'
+  );
+
+  if (errorMessage) {
+    return <Redirect to="/login" />;
+  }
+
+  if (isLoading || !user) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <Avatar imageSrc="/dieter.jpeg" />
-        <h1 className={styles.profileName}>Dieter Bohlen</h1>
+        <Avatar imageSrc={user.imgSrc || '/dieter.jpeg'} />
+        <h1 className={styles.profileName}>
+          {user.firstName} {user.lastName}
+        </h1>
         <span className={styles.profileStatus}>Premium</span>
       </header>
       <main className={styles.profileMenu}>
