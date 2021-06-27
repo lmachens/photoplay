@@ -29,8 +29,3 @@
   margin: auto;
   padding-bottom: 10%;
 }
-
-.registerForm__error {
-  color: var(--alert-color);
-  text-align: center;
-}

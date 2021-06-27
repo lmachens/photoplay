@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Button from '../../components/Button/Button';
+import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import AppIcon from '../../components/Icons/AppIcon';
 import LabeledInput from '../../components/LabeledInput/LabeledInput';
 import useMutation from '../../hooks/useMutation';
@@ -47,9 +48,7 @@ function Login(): JSX.Element {
             required
           />
           <Button disabled={isLoading}>Login</Button>
-          {errorMessage && (
-            <div className={styles.error}>Error: {errorMessage}</div>
-          )}
+          {errorMessage && <ErrorMessage>Error: {errorMessage}</ErrorMessage>}
         </form>
       </main>
       <footer>
