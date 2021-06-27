@@ -35,3 +35,8 @@
   z-index: 0;
   width: 100%;
 }
+
+.error {
+  color: var(--alert-color);
+  text-align: center;
+}
