@@ -51,7 +51,7 @@ function Login(): JSX.Element {
           {errorMessage && <ErrorMessage>Error: {errorMessage}</ErrorMessage>}
         </form>
       </main>
-      <footer>
+      <footer className={styles.footer}>
         {/* <SocialLogins /> */}
         <p className={styles.hint}>Don't have an account?</p>
         <Link to="/register">Register</Link>
