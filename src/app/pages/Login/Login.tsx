@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Button from '../../components/Button/Button';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import AppIcon from '../../components/Icons/AppIcon';
@@ -54,7 +54,7 @@ function Login(): JSX.Element {
       <footer>
         {/* <SocialLogins /> */}
         <p className={styles.hint}>Don't have an account?</p>
-        <a href="#">Register</a>
+        <Link to="/register">Register</Link>
       </footer>
     </div>
   );
