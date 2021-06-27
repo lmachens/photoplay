@@ -8,6 +8,8 @@ import Login from './pages/Login/Login';
 import MovieDetails from './pages/MovieDetails/MovieDetails';
 import TVShowDetails from './pages/TVShowDetails/TVShowDetails';
 import MobileLayout from './components/MobileLayout/MobileLayout';
+import Profile from './pages/Profile/Profile';
+import FavouritePage from './pages/FavouritePage/FavouritePage';
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -22,6 +24,8 @@ const routes: CustomRouteProps[] = [
   { path: '/register', Component: RegisterForm },
   { path: '/cast/:name', Component: Cast },
   { path: '/show/:id', Component: TVShowDetails },
+  { path: '/profile', Component: Profile },
+  { path: '/favorites', Component: FavouritePage },
 ];
 
 function App(): JSX.Element {

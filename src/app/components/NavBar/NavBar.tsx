@@ -11,8 +11,8 @@ function NavBar(): JSX.Element {
     <div className={styles.navBar}>
       <NavBarLink icon={<HomeIcon />} text="Home" link="/" />
       <NavBarLink icon={<SearchIcon />} text="Search" link="#" />
-      <NavBarLink icon={<FavoriteIcon />} text="Favorite" link="#" />
-      <NavBarLink icon={<ProfileIcon />} text="Profile" link="#" />
+      <NavBarLink icon={<FavoriteIcon />} text="Favorite" link="/favorites" />
+      <NavBarLink icon={<ProfileIcon />} text="Profile" link="/profile" />
     </div>
   );
 }
