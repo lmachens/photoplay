@@ -34,3 +34,11 @@
 .profileMenu :last-child {
   border: none;
 }
+
+.imageUpload {
+  cursor: pointer;
+}
+
+.imageUpload input {
+  display: none;
+}

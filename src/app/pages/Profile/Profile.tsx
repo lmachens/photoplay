@@ -41,8 +41,10 @@ function Profile(): JSX.Element {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <input type="file" onChange={handleImageChange} />
-        <Avatar imageSrc={user.imgSrc || '/dieter.jpeg'} />
+        <label className={styles.imageUpload}>
+          <input type="file" onChange={handleImageChange} />
+          <Avatar imageSrc={user.imgSrc || '/dieter.jpeg'} />
+        </label>
         <h1 className={styles.profileName}>
           {user.firstName} {user.lastName}
         </h1>
