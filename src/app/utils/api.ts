@@ -30,7 +30,7 @@ export async function loginUser(credentials: UserCredentials): Promise<User> {
   });
 }
 
-export async function uploadAvatar(imageFile: File): Promise<void> {
+export async function uploadAvatar(imageFile: File): Promise<User> {
   const formData = new FormData();
   formData.append('file', imageFile);
   formData.append('upload_preset', 'llo9r91u');
@@ -43,5 +43,13 @@ export async function uploadAvatar(imageFile: File): Promise<void> {
     }
   );
   const cloudinaryResult = await cloudinaryResponse.json();
-  console.log(cloudinaryResult);
+  return await jsonFetch<User>('/api/users/me', {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      imgSrc: cloudinaryResult.secure_url,
+    }),
+  });
 }
