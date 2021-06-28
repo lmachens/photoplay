@@ -33,10 +33,12 @@ export async function loginUser(credentials: UserCredentials): Promise<User> {
 export async function uploadAvatar(imageFile: File): Promise<User> {
   const formData = new FormData();
   formData.append('file', imageFile);
-  formData.append('upload_preset', 'llo9r91u');
+  formData.append('upload_preset', import.meta.env.VITE_CLOUDINARY_PRESET_NAME);
 
   const cloudinaryResponse = await fetch(
-    'https://api.cloudinary.com/v1_1/dzegtb57h/upload',
+    `https://api.cloudinary.com/v1_1/${
+      import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
+    }/upload`,
     {
       method: 'POST',
       body: formData,
