@@ -95,11 +95,7 @@ function RegisterForm(): JSX.Element {
           />
 
           <Button disabled={isLoading}>Register</Button>
-          {(errorMessage || validationErrorMessage) && (
-            <ErrorMessage>
-              Error: {errorMessage || validationErrorMessage}
-            </ErrorMessage>
-          )}
+          <ErrorMessage>{errorMessage || validationErrorMessage}</ErrorMessage>
         </form>
       </main>
     </div>

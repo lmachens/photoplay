@@ -48,7 +48,7 @@ function Login(): JSX.Element {
             required
           />
           <Button disabled={isLoading}>Login</Button>
-          {errorMessage && <ErrorMessage>Error: {errorMessage}</ErrorMessage>}
+          <ErrorMessage>{errorMessage}</ErrorMessage>
         </form>
       </main>
       <footer className={styles.footer}>
