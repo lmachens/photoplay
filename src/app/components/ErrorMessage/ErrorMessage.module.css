@@ -1,4 +1,5 @@
 .error {
+  display: block;
   color: var(--alert-color);
   text-align: center;
 }

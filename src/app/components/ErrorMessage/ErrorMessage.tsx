@@ -5,7 +5,7 @@ type ErrorMessageProps = {
   children: React.ReactNode;
 };
 function ErrorMessage({ children }: ErrorMessageProps): JSX.Element {
-  return <div className={styles.error}>{children}</div>;
+  return <strong className={styles.error}>{children}</strong>;
 }
 
 export default ErrorMessage;
