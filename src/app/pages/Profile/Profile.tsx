@@ -11,6 +11,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import useFetch from '../../hooks/useFetch';
 import { User } from '../../../types';
 import { Redirect } from 'react-router-dom';
+import { uploadAvatar } from '../../utils/api';
 
 function Profile(): JSX.Element {
   const { data: user, errorMessage } = useFetch<User>('/api/users/me');
@@ -23,9 +24,18 @@ function Profile(): JSX.Element {
     return <div>Loading...</div>;
   }
 
+  function handleImageChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const imageFile = event.target.files?.item(0);
+    if (!imageFile) {
+      return;
+    }
+    uploadAvatar(imageFile);
+  }
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
+        <input type="file" onChange={handleImageChange} />
         <Avatar imageSrc={user.imgSrc || '/dieter.jpeg'} />
         <h1 className={styles.profileName}>
           {user.firstName} {user.lastName}

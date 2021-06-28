@@ -29,3 +29,19 @@ export async function loginUser(credentials: UserCredentials): Promise<User> {
     body: JSON.stringify(credentials),
   });
 }
+
+export async function uploadAvatar(imageFile: File): Promise<void> {
+  const formData = new FormData();
+  formData.append('file', imageFile);
+  formData.append('upload_preset', 'llo9r91u');
+
+  const cloudinaryResponse = await fetch(
+    'https://api.cloudinary.com/v1_1/dzegtb57h/upload',
+    {
+      method: 'POST',
+      body: formData,
+    }
+  );
+  const cloudinaryResult = await cloudinaryResponse.json();
+  console.log(cloudinaryResult);
+}
