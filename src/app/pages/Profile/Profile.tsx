@@ -12,9 +12,15 @@ import useFetch from '../../hooks/useFetch';
 import { User } from '../../../types';
 import { Redirect } from 'react-router-dom';
 import { uploadAvatar } from '../../utils/api';
+import useMutation from '../../hooks/useMutation';
 
 function Profile(): JSX.Element {
-  const { data: user, errorMessage } = useFetch<User>('/api/users/me');
+  const { data: user, errorMessage, refetch } = useFetch<User>('/api/users/me');
+  const { mutate } = useMutation(uploadAvatar, {
+    onSuccess: () => {
+      refetch();
+    },
+  });
 
   if (errorMessage) {
     return <Redirect to="/login" />;
@@ -29,7 +35,7 @@ function Profile(): JSX.Element {
     if (!imageFile) {
       return;
     }
-    uploadAvatar(imageFile);
+    mutate(imageFile);
   }
 
   return (

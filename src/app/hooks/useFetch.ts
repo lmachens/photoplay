@@ -6,19 +6,24 @@ function useFetch<T>(
   data: T | null;
   isLoading: boolean;
   errorMessage: string | null;
+  refetch: () => void;
 } {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [data, setData] = useState<T | null>(null);
   const isLoading = data === null;
 
-  useEffect(() => {
+  function refetch() {
     fetch(url)
       .then((response) => response.json())
       .then(setData)
       .catch((error) => setErrorMessage(error.toString()));
-  }, []);
+  }
 
-  return { data, isLoading, errorMessage };
+  useEffect(() => {
+    refetch();
+  }, [url]);
+
+  return { data, isLoading, errorMessage, refetch };
 }
 
 export default useFetch;
