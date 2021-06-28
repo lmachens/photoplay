@@ -1,6 +1,6 @@
 import express from 'express';
 import { getMovieById, getMultiSearch, getPopularMovies } from './theMovieDB';
-import { findUser, insertUser, deleteUser } from './users';
+import { findUser, insertUser, deleteUser, updateUser } from './users';
 import { ObjectId } from 'mongodb';
 
 const router = express.Router();
@@ -111,6 +111,25 @@ router.get('/users/me', async (req, res, next) => {
       res.status(404).send('User not found');
       return;
     }
+    res.status(200).json(user);
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.patch('/users/me', async (req, res, next) => {
+  try {
+    const { userId } = req.cookies;
+    const fieldsToUpdate = req.body;
+    if (!userId) {
+      return res.status(401).end('Unauthorized! You have to login first.');
+    }
+    const updated = await updateUser(userId, fieldsToUpdate);
+    if (!updated) {
+      res.status(404).send('User not found');
+      return;
+    }
+    const user = await findUser({ _id: new ObjectId(userId) });
     res.status(200).json(user);
   } catch (error) {
     next(error);

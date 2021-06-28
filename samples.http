@@ -38,3 +38,20 @@ GET {{baseUrl}}/api/users/me
 
 ### Search for movies, tv shows and actors
 GET {{baseUrl}}/api/search?query=Cars
+
+### Update user fields
+PATCH {{baseUrl}}/api/users/me
+Content-Type: application/json
+
+{
+  "email": "new@bobson.com",
+  "password": "newPassword"
+}
+
+### Update user fields
+PATCH {{baseUrl}}/api/users/me
+Content-Type: application/json
+
+{
+  "imgSrc": "https://res.cloudinary.com/dzegtb57h/image/upload/v1624870436/vfnbyeloond9whglsmuf.jpg"
+}
