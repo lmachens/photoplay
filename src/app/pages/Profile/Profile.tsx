@@ -13,15 +13,13 @@ import { User } from '../../../types';
 import { Redirect } from 'react-router-dom';
 
 function Profile(): JSX.Element {
-  const { data: user, isLoading, errorMessage } = useFetch<User>(
-    '/api/users/me'
-  );
+  const { data: user, errorMessage } = useFetch<User>('/api/users/me');
 
   if (errorMessage) {
     return <Redirect to="/login" />;
   }
 
-  if (isLoading || !user) {
+  if (!user) {
     return <div>Loading...</div>;
   }
 
