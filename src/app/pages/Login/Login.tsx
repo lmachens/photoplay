@@ -52,7 +52,6 @@ function Login(): JSX.Element {
         </form>
       </main>
       <footer className={styles.footer}>
-        {/* <SocialLogins /> */}
         <p className={styles.hint}>Don't have an account?</p>
         <Link to="/register">Register</Link>
       </footer>
