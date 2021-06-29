@@ -1,4 +1,4 @@
-import { Collection } from 'mongodb';
+import { Collection, ObjectId } from 'mongodb';
 import { User } from '../types';
 import { getCollection, getDB } from './db';
 
@@ -72,4 +72,19 @@ export async function findUser(user: Partial<User>): Promise<User | null> {
   return await getUsersCollection().findOne(user, {
     projection: { password: 0 },
   });
+}
+
+export async function updateUser(
+  userId: string,
+  fieldsToUpdate: Partial<User>
+): Promise<boolean> {
+  const result = await getUsersCollection().updateOne(
+    {
+      _id: new ObjectId(userId),
+    },
+    {
+      $set: fieldsToUpdate,
+    }
+  );
+  return result.modifiedCount > 0;
 }

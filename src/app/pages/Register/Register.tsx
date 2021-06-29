@@ -8,6 +8,7 @@ import ProfilePictureIcon from '../../components/Icons/ProfilePictureIcon';
 import { User } from '../../../types';
 import useMutation from '../../hooks/useMutation';
 import { postUser } from '../../utils/api';
+import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 
 function RegisterForm(): JSX.Element {
   const history = useHistory();
@@ -94,11 +95,7 @@ function RegisterForm(): JSX.Element {
           />
 
           <Button disabled={isLoading}>Register</Button>
-          {(errorMessage || validationErrorMessage) && (
-            <div className={styles.registerForm__error}>
-              Error: {errorMessage || validationErrorMessage}
-            </div>
-          )}
+          <ErrorMessage>{errorMessage || validationErrorMessage}</ErrorMessage>
         </form>
       </main>
     </div>

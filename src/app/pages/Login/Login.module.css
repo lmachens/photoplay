@@ -13,7 +13,6 @@
 }
 
 .main {
-  z-index: 1;
   width: 100%;
   max-width: 500px;
 }
@@ -26,6 +25,11 @@
 
 .hint {
   color: var(--hint-color);
+}
+
+.main,
+.footer {
+  z-index: 1;
 }
 
 .fadeOverlay {
