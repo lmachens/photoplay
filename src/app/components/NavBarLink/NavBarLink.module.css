@@ -1,7 +1,7 @@
 .link {
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--navbar-icon-color);
+  color: var(--color-navbar-icon);
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -13,5 +13,5 @@
 
 .link:hover,
 .link:active {
-  color: var(--primary-color);
+  color: var(--color-primary);
 }

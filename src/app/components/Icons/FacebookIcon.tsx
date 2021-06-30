@@ -11,8 +11,8 @@ export default function FacebookIcon(): JSX.Element {
           y2="1"
           gradientUnits="objectBoundingBox"
         >
-          <stop offset="0" stop-color="var(--primary-gradient-from)" />
-          <stop offset="1" stop-color="var(--primary-gradient-to)" />
+          <stop offset="0" stop-color="var(--gradient-primary-from)" />
+          <stop offset="1" stop-color="var(--gradient-primary-to)" />
         </linearGradient>
       </defs>
 

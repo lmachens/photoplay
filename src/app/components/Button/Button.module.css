@@ -1,6 +1,6 @@
 .button {
-  color: var(--contrast-text-color);
-  background: var(--primary-gradient);
+  color: var(--color-text-contrast);
+  background: var(--gradient-primary);
   font-size: 0.8em;
   padding: 1em 1.5em;
   border: none;
@@ -13,5 +13,5 @@
 }
 
 .button:disabled {
-  background: var(--hint-color);
+  background: var(--color-hint);
 }

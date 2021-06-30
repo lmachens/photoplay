@@ -25,7 +25,7 @@
 
 .registerForm__link {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--color-text);
   margin: auto;
   padding-bottom: 10%;
 }

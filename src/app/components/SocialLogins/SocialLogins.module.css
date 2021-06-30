@@ -1,5 +1,5 @@
 .SocialLogin {
-  border-top: 0.1em solid var(--hint-color);
+  border-top: 0.1em solid var(--color-hint);
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
@@ -8,9 +8,9 @@
 
 .SocialLogin__title {
   padding: 0.2em 1.5em;
-  background-color: var(--background-color);
+  background-color: var(--color-background);
   margin-top: -0.8em;
   text-align: center;
-  color: var(--text-color);
+  color: var(--color-text);
   grid-column: 1/3;
 }
