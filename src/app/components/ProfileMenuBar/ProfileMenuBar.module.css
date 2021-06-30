@@ -1,7 +1,7 @@
 .link {
   text-decoration: none;
-  color: var(--text-color);
-  fill: var(--text-color);
+  color: var(--color-text);
+  fill: var(--color-text);
   display: flex;
   align-items: center;
   gap: 1.4em;

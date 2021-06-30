@@ -1,5 +1,5 @@
 .container {
-  color: var(--text-color);
+  color: var(--color-text);
   display: grid;
   gap: 0.7em;
   text-transform: uppercase;
@@ -8,8 +8,8 @@
 }
 
 .container__input {
-  color: var(--text-color);
-  background-color: var(--secondary-color);
+  color: var(--color-text);
+  background-color: var(--color-secondary);
   border: none;
   padding: 0.8em 1.5em;
   border-radius: 0.8em;
@@ -19,11 +19,11 @@
 }
 
 .container__input::placeholder {
-  color: var(--hint-color);
+  color: var(--color-hint);
   font-family: var(--font-family);
   text-transform: lowercase;
 }
 
 .container__input:focus {
-  outline-color: var(--primary-color);
+  outline-color: var(--color-primary);
 }

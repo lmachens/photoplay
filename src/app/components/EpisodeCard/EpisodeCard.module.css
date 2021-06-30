@@ -23,7 +23,7 @@
 
 .episodeCard__length {
   grid-column: 2;
-  color: var(--hint-color);
+  color: var(--color-hint);
   font-weight: 400;
 }
 
@@ -37,7 +37,7 @@
   padding: 0;
   gap: 0.6em;
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--color-primary);
   border: 0;
   cursor: pointer;
   font-size: 2.5vw;
